@@ -12,7 +12,7 @@ const WhatIDo = () => {
 
         return (
             <Card
-                className="relative w-[400px] overflow-hidden p-0"
+                className="relative lg:w-[400px] my-2 overflow-hidden p-0"
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
             >
@@ -49,7 +49,7 @@ const WhatIDo = () => {
                 <span className="text-2xl">What I Do?</span>
                 <p>From understanding your requirements, designing a blueprint and delivering the final product, <br />I do everything that falls in between these lines.</p>
             </div>
-            <div className='flex justify-between px-2 gap-x-3'>
+            <div className='lg:flex justify-between px-2 gap-x-3'>
                 <Pici icon={DatabaseZap} title="Database management" description="I design, implement, and optimize robust database systems, ensuring data integrity, security, and high performance. My work involves SQL, schema design, stored procedures, and efficient query tuning for business applications." />
                 <Pici icon={CodeXml} title="Software Development" description="I develop, and deploy fast, responsive, and secure websites and full-stack applications. This involves expert use of front-end technologies like React and back-end frameworks to deliver complete digital solutions." />
                 <Pici icon={BrainCircuit} title="AI DEVELOPMENT" description="Designing, engineering, and deploying robust, intelligent, and scalable artificial intelligence and machine learning solutions for predictive modeling, automation, and data-driven decision-making across various platforms and industries." />

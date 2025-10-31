@@ -11,31 +11,37 @@ const Introduction = () => {
                 <TypingAnimation className='text-xl'>BEHNAM NAJAFLOO | SOFTWARE DEVELOPER</TypingAnimation>
 
                 <AnimatedSpan className="text-green-500">
-                    Computer Science Master’s graduate with experience in software development.
+                    Computer Science Master’s graduate with experience in
                 </AnimatedSpan>
                 <AnimatedSpan className="text-green-500">
-                    Proficient in JavaScript, PHP, and Python, with strong expertise in Node.js
+                    software development. Proficient in JavaScript, PHP, and
                 </AnimatedSpan>
                 <AnimatedSpan className="text-green-500">
-                    for building scalable RESTful APIs.
+                    Python, with strong expertise in Node.js for building
                 </AnimatedSpan>
                 <AnimatedSpan className="text-green-500">
-                    Skilled in Next.js and TypeScript, with experience in MySQL and MongoDB.
+                    scalable RESTful APIs.  Skilled in Next.js and TypeScript,
                 </AnimatedSpan>
                 <AnimatedSpan className="text-green-500">
-                    Proven capability in full-stack engineering,
+                    with experience in MySQL and MongoDB. Proven capability
                 </AnimatedSpan>
                 <AnimatedSpan className="text-green-500">
-                    managing development across the entire tech stack and
+                    in full-stack engineering, managing development across
                 </AnimatedSpan>
                 <AnimatedSpan className="text-blue-500">
-                    establishing automated CI/CD pipelines for scalable deployments on platforms.
+                    the entire tech stack and establishing automated CI/CD
                 </AnimatedSpan>
                 <AnimatedSpan className="text-green-500">
-                    Strong interest in machine learning, data preprocessing, and
+                    pipelines for scalable deployments on platforms.
+                </AnimatedSpan>
+                <AnimatedSpan className="text-green-500">
+                    Strong interest in machine learning, data preprocessing,
+                </AnimatedSpan>
+                <AnimatedSpan className="text-green-500">
+                    and ethical AI practices,
                 </AnimatedSpan>
                 <TypingAnimation className="text-muted-foreground">
-                    ethical AI practices, backed by a thesis project on fairness in AI.
+                    backed by a thesis project on fairness in AI.
                 </TypingAnimation>
 
             </Terminal>

@@ -18,15 +18,14 @@ export function Hero() {
                 color="#60A5FA"
                 maxOpacity={0.5}
                 flickerChance={0.1}
-                height={800}
-                width={1200}
+
             />
 
 
             <div className="absolute inset-0 z-49 flex p-4">
                 <div className="flex justify-between w-full lg:px-7">
 
-                    <div className="p-4 pt-32">
+                    <div className="p-4 pt-28">
                         <div className="relative flex">
                             <Introduction />
                         </div>
@@ -44,6 +43,7 @@ export function Hero() {
         </div>
     )
 }
+
 
 
 

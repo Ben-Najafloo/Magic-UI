@@ -31,9 +31,13 @@ export function University() {
                 </HyperText>
             </div>
             <Tabs defaultValue="unimi">
-                <TabsList className="w-full">
+                <TabsList className="w-full hidden sm:block">
                     <TabsTrigger value="unimi">Master's degree, Computer Science</TabsTrigger>
                     <TabsTrigger value="dpi">Bachelor's degree, Information Technology</TabsTrigger>
+                </TabsList>
+                <TabsList className="w-full block sm:hidden">
+                    <TabsTrigger value="unimi">Master's degree</TabsTrigger>
+                    <TabsTrigger value="dpi">Bachelor's degree</TabsTrigger>
                 </TabsList>
                 <TabsContent value="unimi">
                     <Card>

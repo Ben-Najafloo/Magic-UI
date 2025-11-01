@@ -23,9 +23,9 @@ export function Hero() {
 
 
             <div className="absolute inset-0 z-49 flex p-4">
-                <div className="flex justify-between w-full lg:px-7">
+                <div className="lg:flex justify-between w-full lg:px-7">
 
-                    <div className="p-4 pt-28">
+                    <div className="pt-28">
                         <div className="relative flex">
                             <Introduction />
                         </div>

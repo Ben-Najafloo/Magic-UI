@@ -1,10 +1,19 @@
 import React from "react";
 import { FloatingDock } from "@/components/ui/floating-dock";
 import { BriefcaseBusiness, CodeXml, GraduationCap, History, MonitorPause, ShieldCheck } from "lucide-react";
+import { TbFileCv } from "react-icons/tb";
+
 
 export function Menu() {
 
     const links = [
+        {
+            title: "CV",
+            icon: (
+                <TbFileCv className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+            ),
+            href: "/cv",
+        },
         {
             title: "History",
             icon: (
@@ -52,10 +61,10 @@ export function Menu() {
         },
     ];
     return (
-        <div className="flex items-center justify-center h-[2rem] w-full pt-2">
+        <div className="flex items-center justify-center h-[2rem] w-full pt-2 ">
             <FloatingDock
                 // only for demo, remove for production
-                mobileClassName="translate-y-20"
+                mobileClassName="translate-12 "
                 items={links} />
         </div>
     );

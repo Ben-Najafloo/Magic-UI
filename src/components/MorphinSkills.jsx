@@ -7,7 +7,7 @@ const texts = [
 
 export function MorphinSkills() {
     return (
-        <CardSpotlight>
+        <CardSpotlight className='bg-white dark:bg-black'>
             <MorphingText texts={texts} className="w-full my-48" />
         </CardSpotlight>
     )

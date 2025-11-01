@@ -38,7 +38,7 @@ const WhatIDo = () => {
         );
     }
     return (
-        <div id="activity" className="bg-background lg:px-20 relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden rounded-lg border">
+        <div id="activity" className="bg-background lg:px-20 relative flex lg:h-[500px] w-full flex-col items-center justify-center overflow-hidden rounded-lg border">
             <InteractiveGridPattern
                 className={cn(
                     "[mask-image:radial-gradient(500px_circle_at_center,white,transparent)]",

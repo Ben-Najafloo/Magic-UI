@@ -11,7 +11,7 @@ const Footer = () => {
 
         <footer className="border-t-2 bg-white dark:bg-black ">
             <div className="mx-auto w-full max-w-screen-xl lg:px-4 px-2 pt-4 pb-6">
-                <div className='justify-end w-full flex mb-5'>
+                <div className='lg:justify-end w-full flex mb-5'>
                     <FastContact />
                 </div>
 

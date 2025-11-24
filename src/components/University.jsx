@@ -53,6 +53,7 @@ export function University() {
                             <div className="w-full">
                                 <CardHeader>
                                     <CardTitle>Università degli Studi di Milano</CardTitle>
+                                    <CardTitle>Computer Science</CardTitle>
                                     <CardDescription>
                                         Sep 2021 - Jul 2025
                                     </CardDescription>
@@ -105,6 +106,7 @@ export function University() {
                             <div className="w-full">
                                 <CardHeader>
                                     <CardTitle>Dade Pardazi Iran</CardTitle>
+                                    <CardTitle>Web Based Programming</CardTitle>
                                     <CardDescription>
                                         2013 - 2015
                                     </CardDescription>

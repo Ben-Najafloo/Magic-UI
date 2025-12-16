@@ -104,7 +104,7 @@ export default function JobEx() {
             ),
         },
         {
-            title: "Dec 2021 - Apr 2023",
+            title: "Dec 2020 - Apr 2023",
             content: (
                 <ExpCard
                     logo={exp[2].logo}

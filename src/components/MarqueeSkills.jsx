@@ -191,12 +191,12 @@ export function MarqueeSkills() {
                 </HyperText>
             </div>
 
-            <Marquee pauseOnHover className="[--duration:20s]">
+            <Marquee pauseOnHover className="[--duration:40s]">
                 {firstRow.map((review) => (
                     <ReviewCard key={review.id} {...review} />
                 ))}
             </Marquee>
-            <Marquee reverse pauseOnHover className="[--duration:20s]">
+            <Marquee reverse pauseOnHover className="[--duration:40s]">
                 {secondRow.map((review) => (
                     <ReviewCard key={review.id} {...review} />
                 ))}

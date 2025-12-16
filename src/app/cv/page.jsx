@@ -1,7 +1,3 @@
-import {
-    Card,
-    CardHeader,
-} from "@/components/ui/card"
 import { Lens } from "@/components/ui/lens"
 
 

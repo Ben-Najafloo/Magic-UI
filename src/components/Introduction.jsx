@@ -20,7 +20,7 @@ const Introduction = () => {
                     Python, with strong expertise in Node.js for building
                 </AnimatedSpan>
                 <AnimatedSpan className="text-green-500">
-                    scalable RESTful APIs.  Skilled in Next.js and TypeScript,
+                    scalable RESTful APIs.  Skilled in Next.js  and TypeScript,
                 </AnimatedSpan>
                 <AnimatedSpan className="text-green-500">
                     with experience in MySQL and MongoDB. Proven capability

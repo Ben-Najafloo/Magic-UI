@@ -11,7 +11,7 @@ const Introduction = () => {
                 <TypingAnimation className='text-xl'>BEHNAM NAJAFLOO | SOFTWARE DEVELOPER</TypingAnimation>
 
                 <AnimatedSpan className="text-green-500">
-                    Computer Science Master’s graduate with experience in
+                    Computer Science Master’s graduate with  experience in
                 </AnimatedSpan>
                 <AnimatedSpan className="text-green-500">
                     software development. Proficient in JavaScript, PHP, and

@@ -1,8 +1,9 @@
 import { FlickeringGrid } from "@/components/ui/flickering-grid"
-import { PixImage } from "./PixImage"
+// import { PixImage } from "./PixImage"
 import { Pointer } from "@/components/ui/pointer"
 import Introduction from "./Introduction"
-import { OrbitingSkills } from "./OrbitingSkills"
+import WordCloud from "./WordCload"
+// import { OrbitingSkills } from "./OrbitingSkills"
 
 // import { LensPic } from "./LensPic"
 
@@ -36,7 +37,8 @@ export function Hero() {
 
                     <div className="pt-32">
                         {/* <PixImage /> */}
-                        <OrbitingSkills />
+                        {/* <OrbitingSkills /> */}
+                        <WordCloud />
                     </div>
                 </div>
             </div>

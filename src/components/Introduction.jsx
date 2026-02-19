@@ -11,37 +11,32 @@ const Introduction = () => {
                 <TypingAnimation className='text-xl'>BEHNAM NAJAFLOO | SOFTWARE DEVELOPER</TypingAnimation>
 
                 <AnimatedSpan className="text-green-500">
-                    Computer Science Master’s graduate with  experience in
+                    With years of experience building and deploying scalable web applications using JavaScript, TypeScript, and Python.
                 </AnimatedSpan>
                 <AnimatedSpan className="text-green-500">
-                    software development. Proficient in JavaScript, PHP, and
+                    Architecting advanced AI workflows, integrating LLMs and vector databases.
                 </AnimatedSpan>
                 <AnimatedSpan className="text-green-500">
-                    Python, with strong expertise in Node.js for building
+                    Proficient in architecting backends using frameworks like Flask and FastAPI, Express.js, and Next.js.
                 </AnimatedSpan>
                 <AnimatedSpan className="text-green-500">
-                    scalable RESTful APIs.  Skilled in Next.js  and TypeScript,
+                    And database ORMs like Prisma, SQLAlchemy and MongoDB.
                 </AnimatedSpan>
                 <AnimatedSpan className="text-green-500">
-                    with experience in MySQL and MongoDB. Proven capability
+                    Deep understanding of software architecture and deployment, leveraging Docker, Git, Github Actions and Jenkins for robust CI/CD and environment stability.
                 </AnimatedSpan>
                 <AnimatedSpan className="text-green-500">
-                    in full-stack engineering, managing development across
+                    Expertise in modern frontend frameworks including React.js and Next.js, combined with professional experience in dynamic state management using Redux Toolkit.
+                </AnimatedSpan>
+                <AnimatedSpan className="text-green-500">
+                    A proactive collaborator with a disciplined approach to Agile/Scrum methodologies, ensuring the delivery of high-quality, documented, and maintainable code.
                 </AnimatedSpan>
                 <AnimatedSpan className="text-blue-500">
-                    the entire tech stack and establishing automated CI/CD
+                    Completed an M.Sc. in Computer Science, Gained deep knowledge in AI and ML algorithms, which facilitates the seamless integration of advanced AI features.
                 </AnimatedSpan>
-                <AnimatedSpan className="text-green-500">
-                    pipelines for scalable deployments on platforms.
-                </AnimatedSpan>
-                <AnimatedSpan className="text-green-500">
-                    Strong interest in machine learning, data preprocessing,
-                </AnimatedSpan>
-                <AnimatedSpan className="text-green-500">
-                    and ethical AI practices,
-                </AnimatedSpan>
+
                 <TypingAnimation className="text-muted-foreground">
-                    backed by a thesis project on fairness in AI.
+                    Fluent in English with professional proficiency , complemented by limited working proficiency in Italian , ensuring effective collaboration in international environments.
                 </TypingAnimation>
 
             </Terminal>

@@ -38,7 +38,7 @@ export function Hero() {
                     <div className="pt-32">
                         {/* <PixImage /> */}
                         {/* <OrbitingSkills /> */}
-                        <WordCloud />
+                        {/* <WordCloud /> */}
                     </div>
                 </div>
             </div>

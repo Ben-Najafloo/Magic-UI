@@ -5,13 +5,13 @@ import { Badge } from "@/components/ui/badge";
 
 const exp = [
     {
-        company: "Freelance",
-        logo: "Bt.png",
+        company: "University of Milan",
+        logo: "unimia.png",
         role: "SOFTWARE DEVELOPER",
         duration: "",
         description:
-            "Designed and developed a fairness assessment tool in AI/ML as part of my Master’s thesis, focusing on data preprocessing, bias detection, and ethical AI practices. Contributed to the development of Nexora, an EU-funded projects platform, implementing backend services and frontend features to support scalable collaboration. Delivered multiple web solutions for clients, including custom CMS applications, ensuring responsive design, usability, and maintainability.",
-        tech: ["Python", "PyTorch", "Fairness", "AI"],
+            "Developed a full-stack web application for evaluating fairness in AI models using Flask (Python) and React Designed and implemented RESTful APIs with Flask, using Pydantic for schema validation and mod￾ular routing to structure backend services. Built a React frontend with modern tooling (Axios, TanStack Query, Zod) for state management, data validation, and efficient API integration. Implemented interactive data visualizations with Chart.js to analyze model performance and fairness metrics. Optimized frontend performance through code splitting, lazy loading, and modular component archi￾tecture.",
+        tech: ["Python", "Flask", "React", "Fairness", "AI", "ML", "Fairlearn", "Chart.js"],
     },
     {
         company: "Zerolatency",
@@ -19,8 +19,8 @@ const exp = [
         role: "SOFTWARE DEVELOPER",
         duration: "",
         description:
-            "Developed and maintained modern, responsive web application features using React and libraries like Material UI and Chakra UI. Conducted thorough testing and debugging with BrowserStack, Jest, and Redux devtools. Collaborate with designers, backend developers, and product managers in an agile environment.",
-        tech: ["Go", "React", "GCP"],
+            "Developed and maintained scalable RESTful APIs using Python (Flask) and Node.js (Express), leveraging PostgreSQL for efficient data persistence and real-time video translation services. Architected high-performance applications using Next.js, strategically implementing SSR, ISR and SSG to maximize SEO and Core Web Vitals. Managed the integration of RESTful APIs and state management using Redux Toolkit, Zustand, ensuring robust and predictable UI behavior. Collaborated daily in an Agile/Scrum environment, using Jira for sprint tracking and Git for collabo￾rative version control and code reviews.",
+        tech: ["Python", "Flask", "React", "Redux", "Node.js", "Express", "Next.js", "PostgreSQL", "Tailwind"],
     },
     {
         company: "Respina",
@@ -28,17 +28,17 @@ const exp = [
         role: "FRONTEND DEVELOPER",
         duration: "",
         description:
-            "Translated UI/UX designs into functional and responsive web pages using HTML, CSS, and JavaScript. Focused on user experience and interface design for internal dashboards and client portals, ensuring cross-browser compatibility. Developed an eye for detail in implementing visual elements and interaction patterns, contributing to intuitive user interfaces.",
-        tech: ["Flask", "React", "Tailwind"],
+            "Built and maintained UI components using React, focusing on semantic HTML and technical SEO best practices. Developed mobile-first Responsive Designs using modern CSS framework like Tailwind and Boot￾strap, ensuring seamless experiences across all devices. Participated in the team’s development workflow using Git/GitHub, contributing to codebase main￾tenance and documentation. Attended project kickoff and status meetings to understand project goals and contribute to the suc￾cessful delivery of features.",
+        tech: ["JavaScript", "React", "Tailwind", "HTML", "CSS", "MUI", "Bootstrap"],
     },
     {
         company: "Respina",
         logo: "Res.png",
-        role: "WIRELESS COMMUNICATION TECHNICIAN",
+        role: "FRONTEND DEVELOPER - Internship",
         duration: "",
         description:
-            "Worked as a Wireless communication expert.",
-        tech: ["Python", "Pandas", "ML"],
+            "Implemented accessible UI components following WCAG guidelines, ensuring the application was usable for all users regardless of disability. Translated Figma/Adobe XD designs into pixel-perfect, Responsive web pages using semantic HTML and modern CSS. Learned fundamentals of responsive design and cross-browser compatibility by working on legacy dashboard components. Participated in daily stand-ups and contributed to small UI bug fixes as part of an Agile team.",
+        tech: ["JavaScript", "React", "Tailwind", "HTML", "CSS", "MUI", "Bootstrap"],
     },
 ];
 
@@ -78,7 +78,7 @@ export default function JobEx() {
     }
     const data = [
         {
-            title: "Oct 2024 – Present",
+            title: "Dec 2024 – Jul 2025",
             content: (
                 <ExpCard
                     logo={exp[0].logo}
@@ -91,7 +91,7 @@ export default function JobEx() {
             ),
         },
         {
-            title: "Aug 2023 - Oct 2024",
+            title: "Aug 2023 - Mar 2025",
             content: (
                 <ExpCard
                     logo={exp[1].logo}
@@ -117,7 +117,7 @@ export default function JobEx() {
             ),
         },
         {
-            title: "2015 – 2020",
+            title: "Jan 2015 – Dec 2020",
             content: (
                 <ExpCard
                     logo={exp[3].logo}

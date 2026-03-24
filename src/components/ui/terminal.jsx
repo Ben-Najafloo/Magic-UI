@@ -52,7 +52,7 @@ export const AnimatedSpan = ({
       initial={{ opacity: 0, y: -5 }}
       animate={shouldAnimate ? { opacity: 1, y: 0 } : { opacity: 0, y: -5 }}
       transition={{ duration: 0.3, delay: sequence ? 0 : delay / 1000 }}
-      className={cn("grid text-sm font-normal tracking-tight", className)}
+      className={cn("grid text-sm w-full font-normal tracking-tight", className)}
       onAnimationComplete={() => {
         if (!sequence) return
         if (itemIndex === null) return
@@ -189,22 +189,19 @@ export const Terminal = ({
     ));
   }, [children, sequence])
 
+
   const content = (
     <div
       ref={containerRef}
+
       className={cn(
-        "border-border bg-background z-0 h-full lg:max-h-[410px] w-full  rounded-xl border",
+        "border-border bg-background z-0 h-full lg:max-h-102.5 w-full rounded-xl border overflow-hidden",
         className
       )}>
-      {/* <div className="border-border flex flex-col gap-y-2 border-b p-4">
-        <div className="flex flex-row gap-x-2">
-          <div className="h-2 w-2 rounded-full bg-red-500"></div>
-          <div className="h-2 w-2 rounded-full bg-yellow-500"></div>
-          <div className="h-2 w-2 rounded-full bg-green-500"></div>
-        </div>
-      </div> */}
-      <pre className="p-4">
-        <code className="grid gap-y-3 overflow-auto">{wrappedChildren}</code>
+      <pre className="p-4 whitespace-pre-wrap wrap-break-words">
+        <code className="grid gap-y-3 w-full">
+          {wrappedChildren}
+        </code>
       </pre>
     </div>
   )

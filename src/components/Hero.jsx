@@ -10,7 +10,7 @@ import WordCloud from "./WordCload"
 
 export function Hero() {
     return (
-        <div className="bg-background relative size-[600px] w-full overflow-hidden rounded-lg border">
+        <div className="bg-background relative w-full overflow-hidden rounded-lg border min-h-screen">
 
             <FlickeringGrid
                 className="absolute inset-0 z-0 [mask-image:radial-gradient(450px_circle_at_center,white,transparent)]"
@@ -23,7 +23,7 @@ export function Hero() {
             />
 
 
-            <div className="absolute inset-0 z-49 flex p-4">
+            <div className="absolute inset-0 z-40 flex p-4">
                 <div className="lg:flex justify-between w-full lg:px-7">
 
                     <div className="pt-28">

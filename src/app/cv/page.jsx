@@ -7,7 +7,7 @@ import Link from "next/link"
 const page = () => {
     return (
         <>
-            <Link href="/projects" className='fixed top-1/2 z-50 right-10 pointer'>
+            <a href="/EN_Behnam-Najafloo.pdf" download="Behnam-Najafloo" className='fixed top-1/2 z-50 right-10 pointer'>
                 <div className="relative flex pt-4 items-center justify-center">
                     <div className="group rounded border border-black/5 bg-neutral-100 text-lg text-white transition-all ease-in hover:cursor-pointer hover:bg-neutral-200 dark:border-white/5 dark:bg-neutral-900 dark:hover:bg-neutral-800">
                         <AnimatedShinyText className="inline-flex items-center justify-center px-4 py-1 transition ease-out hover:text-neutral-600 hover:duration-300 hover:dark:text-neutral-400">
@@ -16,7 +16,7 @@ const page = () => {
                         </AnimatedShinyText>
                     </div>
                 </div>
-            </Link>
+            </a>
 
 
             <div className="items-center justify-center pt-10">

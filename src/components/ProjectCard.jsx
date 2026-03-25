@@ -3,6 +3,7 @@ import { Database, ShieldCheck, Cpu, Globe, Users, Layers, ExternalLink, Github,
 import Link from 'next/link';
 import { MdKeyboardBackspace } from 'react-icons/md';
 import Image from 'next/image';
+import { VideoDialog } from './VideoDialog';
 
 
 const IconMap = {
@@ -37,12 +38,13 @@ const Page = ({ project }) => {
                 </div>
                 <div className="flex gap-3">
                     {project.liveUrl && (
-                        <a href={project.liveUrl} className="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 font-medium hover:opacity-90 transition-all text-sm">
-                            <ExternalLink size={16} /> Live Demo
-                        </a>
+                        // <a href={project.liveUrl} className="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 font-medium hover:opacity-90 transition-all text-sm">
+                        //     <ExternalLink size={16} /> Live Demo
+                        // </a>
+                        <VideoDialog videoSrc={project.liveUrl} />
                     )}
                     {project.repoUrl && (
-                        <a href={project.repoUrl} className="inline-flex items-center gap-2 px-4 py-2 rounded-md border border-zinc-200 dark:border-zinc-800 hover:bg-zinc-50 dark:hover:bg-zinc-900 transition-all text-sm font-medium">
+                        <a href={project.repoUrl} target="_blank" className="inline-flex items-center gap-2 px-4 py-2 rounded-md border border-zinc-200 dark:border-zinc-800 hover:bg-zinc-50 dark:hover:bg-zinc-900 transition-all text-sm font-medium">
                             <Github size={16} /> Source
                         </a>
                     )}

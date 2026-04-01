@@ -26,6 +26,13 @@ const data =
             ],
         },
         {
+            pictures:
+                [
+                    "https://media.licdn.com/dms/image/v2/D4D22AQHHre3vGdhiOA/feedshare-shrink_800/B4DZ0kfTrVIAAk-/0/1774433680413?e=1776297600&v=beta&t=YMhM6vCEmp5E4XuGb4w4fE7wk5cNnA9YsSu8k-YYRGc",
+
+                ]
+        },
+        {
             "aboutMe": [
                 {
                     "id": 1,

@@ -36,6 +36,14 @@ const VOCABULARY = [
     { german: 'Ich spreche ein bisschen...', english: 'I speak a little...', category: 'Personal Info' },
     { german: 'meine Muttersprache', english: 'my native language', category: 'Personal Info' },
 
+    // Jobs
+    { german: 'der Arzt', english: 'doctor', category: 'Jobs' },
+    { german: 'der Lehrer', english: 'teacher', category: 'Jobs' },
+    { german: 'der Kellner', english: 'waiter', category: 'Jobs' },
+    { german: 'der Polizist', english: 'police officer', category: 'Jobs' },
+    { german: 'der Mechaniker', english: 'mechanic', category: 'Jobs' },
+    { german: 'der Engenieur', english: 'Engineer', category: 'Jobs' },
+    { german: 'der Student', english: 'student', category: 'Jobs' },
     // Family
     { german: 'die Mutter', english: 'mother', category: 'Family' },
     { german: 'der Vater', english: 'father', category: 'Family' },
@@ -70,6 +78,32 @@ const VOCABULARY = [
     { german: 'der Salat', english: 'salad', category: 'Food & Drink' },
     { german: 'der Zucker', english: 'sugar', category: 'Food & Drink' },
     { german: 'das Salz', english: 'salt', category: 'Food & Drink' },
+    { german: 'das Hähnchen', english: 'chicken', category: 'Food & Drink' },
+    { german: 'der Fisch', english: 'fish', category: 'Food & Drink' },
+    { german: 'das Ei', english: 'egg', category: 'Food & Drink' },
+    { german: 'der Kuchen', english: 'cake', category: 'Food & Drink' },
+    { german: 'der honig', english: 'honey', category: 'Food & Drink' },
+    { german: 'die Marmelade', english: 'jam', category: 'Food & Drink' },
+
+    // Places
+    { german: 'das Museum', english: 'Museum', category: 'Places' },
+    { german: 'der Park', english: 'park', category: 'Places' },
+    { german: 'die Bank', english: 'bank', category: 'Places' },
+    { german: 'der Supermarkt', english: 'supermarket', category: 'Places' },
+    { german: 'das Restaurant', english: 'restaurant', category: 'Places' },
+    { german: 'die Bibliothek', english: 'library', category: 'Places' },
+    { german: 'das Kino', english: 'cinema', category: 'Places' },
+    { german: 'das Theater', english: 'theater', category: 'Places' },
+    { german: 'die Post', english: 'post office', category: 'Places' },
+    { german: 'das Cafe', english: 'cafe', category: 'Places' },
+    { german: 'die Apotheke', english: 'pharmacy', category: 'Places' },
+
+    // fruits
+    { german: 'die Frucht', english: 'fruit', category: 'Fruits' },
+    { german: 'die Apfel', english: 'apple', category: 'Fruits' },
+    { german: 'die Banane', english: 'banana', category: 'Fruits' },
+    { german: 'die Erdbeere', english: 'strawberry', category: 'Fruits' },
+
 
     // Dining Items
     { german: 'das Messer', english: 'knife', category: 'Dining' },
@@ -101,12 +135,16 @@ const VOCABULARY = [
     { german: 'Stunde', english: 'hour', category: 'Time' },
     { german: 'Minute', english: 'minute', category: 'Time' },
     { german: 'Zeit', english: 'time', category: 'Time' },
+    { german: 'Viertel vor fünf', english: 'quarter to five', category: 'Time' },
+    { german: 'Viertel nach fünf', english: 'quarter past five', category: 'Time' },
+    { german: 'es ist halb acht', english: 'half past seven', category: 'Time' },
 
     // Days & Months
     { german: 'der Tag', english: 'day', category: 'Time' },
     { german: 'die Woche', english: 'week', category: 'Time' },
     { german: 'der Monat', english: 'month', category: 'Time' },
     { german: 'das Jahr', english: 'year', category: 'Time' },
+    { german: 'das wochenende', english: 'weekend', category: 'Time' },
     { german: 'Montag', english: 'Monday', category: 'Days' },
     { german: 'Dienstag', english: 'Tuesday', category: 'Days' },
     { german: 'Mittwoch', english: 'Wednesday', category: 'Days' },
@@ -114,6 +152,10 @@ const VOCABULARY = [
     { german: 'Freitag', english: 'Friday', category: 'Days' },
     { german: 'Samstag', english: 'Saturday', category: 'Days' },
     { german: 'Sonntag', english: 'Sunday', category: 'Days' },
+    { german: 'uns heute Abend', english: 'tonight', category: 'Time' },
+    { german: 'uns heute Morgen', english: 'this morning', category: 'Time' },
+    { german: 'uns um 12:00 Uhr', english: 'at 12:00 o\'clock', category: 'Time' },
+    { german: 'uns nach dem Abendessen', english: 'after dinner', category: 'Time' },
 
     // Months
     { german: 'Januar', english: 'January', category: 'Months' },
@@ -234,6 +276,8 @@ const VOCABULARY = [
     { german: 'das Fenster', english: 'window', category: 'Home' },
     { german: 'die Tür', english: 'door', category: 'Home' },
     { german: 'der Schrank', english: 'wardrobe', category: 'Home' },
+    { german: 'die Wand', english: 'wall', category: 'Home' },
+    { german: 'das Sofa', english: 'sofa', category: 'Home' },
 
     // Verbs
     { german: 'aufstehen', english: 'to get up', category: 'Verbs' },
@@ -251,6 +295,20 @@ const VOCABULARY = [
     { german: 'kommen', english: 'to come', category: 'Verbs' },
     { german: 'fahren', english: 'to drive / travel', category: 'Verbs' },
 
+    // W Frage
+    { german: 'Wo', english: 'Where', category: 'W Frage' },
+    { german: 'Woher', english: 'Where from', category: 'W Frage' },
+    { german: 'Wohin', english: 'Where to', category: 'W Frage' },
+    { german: 'Wann', english: 'When', category: 'W Frage' },
+    { german: 'Warum', english: 'Why', category: 'W Frage' },
+    { german: 'Wie', english: 'How', category: 'W Frage' },
+    { german: 'Wie oft', english: 'How often', category: 'W Frage' },
+    { german: 'Wie viel', english: 'How much', category: 'W Frage' },
+    { german: 'Wie viele', english: 'How many', category: 'W Frage' },
+    { german: 'Was', english: 'What', category: 'W Frage' },
+    { german: 'Wer', english: 'Who', category: 'W Frage' },
+    { german: 'Welche/r/s', english: 'Which', category: 'W Frage' },
+
     // Animals
     { german: 'der Hund', english: 'dog', category: 'Animals' },
     { german: 'die Katze', english: 'cat', category: 'Animals' },
@@ -267,6 +325,14 @@ const VOCABULARY = [
     { german: 'die Spinne', english: 'spider', category: 'Animals' },
     { german: 'die Biene', english: 'bee', category: 'Animals' },
     { german: 'die Ente', english: 'duck', category: 'Animals' },
+
+    // Stationery
+    { german: 'das Buch', english: 'book', category: 'Stationery' },
+    { german: 'der Brief', english: 'letter', category: 'Stationery' },
+    { german: 'die Postkarte', english: 'postcard', category: 'Stationery' },
+    { german: 'der Stift', english: 'pen', category: 'Stationery' },
+    { german: 'das Papier', english: 'paper', category: 'Stationery' },
+
 
     // Verb Akkusative
     { german: 'haben', english: 'to have', category: 'Accusative Verbs' },
@@ -315,6 +381,38 @@ const VOCABULARY = [
     { german: 'bewölkt', english: 'cloudy', category: 'Weather' },
     { german: 'neblig', english: 'foggy', category: 'Weather' },
 
+    // Vacation
+    { german: 'der Urlaub', english: 'vacation', category: 'Vacation' },
+
+    // Prepositions
+    { german: 'auf', english: 'on', category: 'Prepositions' },
+    { german: 'an', english: 'at', category: 'Prepositions' },
+    { german: 'ab', english: 'from - Dativ', category: 'Prepositions' },
+    { german: 'bei', english: 'at - Dativ', category: 'Prepositions' },
+    { german: 'durch', english: 'through - Akku', category: 'Prepositions' },
+    { german: 'im', english: 'in', category: 'Prepositions' },
+    { german: 'in', english: 'in', category: 'Prepositions' },
+    { german: 'mit', english: 'with - Dativ', category: 'Prepositions' },
+    { german: 'nach', english: 'after - Dativ', category: 'Prepositions' },
+    { german: 'unter', english: 'under', category: 'Prepositions' },
+    { german: 'zu', english: 'to - Dativ', category: 'Prepositions' },
+    { german: 'hinter', english: 'behind', category: 'Prepositions' },
+    { german: 'vor', english: 'before', category: 'Prepositions' },
+    { german: 'ohne', english: 'without - Akku', category: 'Prepositions' },
+    { german: 'mit', english: 'with', category: 'Prepositions' },
+    { german: 'außer', english: 'except - Dativ', category: 'Prepositions' },
+    { german: 'um', english: 'around - Akku', category: 'Prepositions' },
+    { german: 'gegen', english: 'against - Akku', category: 'Prepositions' },
+    { german: 'gegenüber', english: 'in front of - Dativ', category: 'Prepositions' },
+    { german: 'Nach', english: 'after', category: 'Prepositions' },
+    { german: 'aus', english: 'from - Dativ', category: 'Prepositions' },
+    { german: 'von', english: 'from - Dativ', category: 'Prepositions' },
+    { german: 'seit', english: 'since (for) - Dativ', category: 'Prepositions' },
+    { german: 'nebe', english: 'beside', category: 'Prepositions' },
+    { german: 'zwischen', english: 'between', category: 'Prepositions' },
+    { german: 'für', english: 'for - Akku', category: 'Prepositions' },
+    { german: 'bis', english: 'until - Akku', category: 'Prepositions' },
+
     // Health
     { german: 'der Arzt / die Ärztin', english: 'doctor', category: 'Health' },
     { german: 'der Zahnarzt / die Zahnärztin', english: 'dentist', category: 'Health' },
@@ -336,6 +434,8 @@ const VOCABULARY = [
     { german: 'die Nase', english: 'nose', category: 'Body' },
     { german: 'der Mund', english: 'mouth', category: 'Body' },
     { german: 'das Auge', english: 'eye', category: 'Body' },
+    { german: 'der Fuß', english: 'foot', category: 'Body' },
+    { german: 'das Herz', english: 'heart', category: 'Body' },
 
     // Adjectives
     { german: 'groß', english: 'big / tall', category: 'Adjectives' },
@@ -363,6 +463,18 @@ const VOCABULARY = [
     { german: 'müde', english: 'tired', category: 'Adjectives' },
     { german: 'gesund', english: 'healthy', category: 'Adjectives' },
     { german: 'krank', english: 'sick', category: 'Adjectives' },
+
+    // Hobbies
+    { german: 'die Zeitung', english: 'newspaper', category: 'Hobbies' },
+    { german: 'das Buch', english: 'book', category: 'Hobbies' },
+    { german: 'der Film', english: 'movie', category: 'Hobbies' },
+    { german: 'das Spiel', english: 'game', category: 'Hobbies' },
+    { german: 'der Sport', english: 'sport', category: 'Hobbies' },
+    { german: 'die Musik', english: 'music', category: 'Hobbies' },
+    { german: 'die Fotografie', english: 'photography', category: 'Hobbies' },
+    { german: 'das Fitnessstudio', english: 'gym', category: 'Hobbies' },
+    { german: 'der Fußball', english: 'football', category: 'Hobbies' },
+
 ];
 
 const Page = () => {

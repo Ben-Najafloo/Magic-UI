@@ -84,19 +84,8 @@ const VOCABULARY = [
     { german: 'der Kuchen', english: 'cake', category: 'Food & Drink' },
     { german: 'der honig', english: 'honey', category: 'Food & Drink' },
     { german: 'die Marmelade', english: 'jam', category: 'Food & Drink' },
+    { german: 'lecker', english: 'delicious', category: 'Food & Drink' },
 
-    // Places
-    { german: 'das Museum', english: 'Museum', category: 'Places' },
-    { german: 'der Park', english: 'park', category: 'Places' },
-    { german: 'die Bank', english: 'bank', category: 'Places' },
-    { german: 'der Supermarkt', english: 'supermarket', category: 'Places' },
-    { german: 'das Restaurant', english: 'restaurant', category: 'Places' },
-    { german: 'die Bibliothek', english: 'library', category: 'Places' },
-    { german: 'das Kino', english: 'cinema', category: 'Places' },
-    { german: 'das Theater', english: 'theater', category: 'Places' },
-    { german: 'die Post', english: 'post office', category: 'Places' },
-    { german: 'das Cafe', english: 'cafe', category: 'Places' },
-    { german: 'die Apotheke', english: 'pharmacy', category: 'Places' },
 
     // fruits
     { german: 'die Frucht', english: 'fruit', category: 'Fruits' },
@@ -198,8 +187,8 @@ const VOCABULARY = [
     { german: 'fünfte', english: 'fifth', category: 'Ordinals' },
 
     // Transportation
-    { german: 'der Bahnhof', english: 'train station', category: 'Places' },
-    { german: 'der Flughafen', english: 'airport', category: 'Places' },
+    { german: 'der Bahnhof', english: 'train station', category: 'Transportation' },
+    { german: 'der Flughafen', english: 'airport', category: 'Transportation' },
     { german: 'der Bus', english: 'bus', category: 'Transportation' },
     { german: 'die U-Bahn', english: 'underground', category: 'Transportation' },
     { german: 'das Auto', english: 'car', category: 'Transportation' },
@@ -211,9 +200,9 @@ const VOCABULARY = [
     { german: 'das Schiff', english: 'ship / boat', category: 'Transportation' },
     { german: 'zu Fuß gehen', english: 'to go on foot / to walk', category: 'Transportation' },
     { german: 'die Fahrkarte', english: 'ticket', category: 'Transportation' },
-    { german: 'die Haltestelle', english: 'stop / station (bus or tram)', category: 'Places' },
-    { german: 'der Bahnsteig', english: 'platform', category: 'Places' },
-    { german: 'das Gleis', english: 'track', category: 'Places' },
+    { german: 'die Haltestelle', english: 'stop / station (bus or tram)', category: 'Transportation' },
+    { german: 'der Bahnsteig', english: 'platform', category: 'Transportation' },
+    { german: 'das Gleis', english: 'track', category: 'Transportation' },
     { german: 'einsteigen', english: 'to get on / board', category: 'Transportation' },
     { german: 'aussteigen', english: 'to get off / exit', category: 'Transportation' },
     { german: 'umsteigen', english: 'to transfer / change trains', category: 'Transportation' },
@@ -260,6 +249,13 @@ const VOCABULARY = [
     { german: 'der Supermarkt', english: 'supermarket', category: 'Places' },
     { german: 'das Geschäft', english: 'shop', category: 'Places' },
     { german: 'das Rathaus', english: 'town hall', category: 'Places' },
+    { german: 'dort', english: 'there', category: 'Places' },
+    { german: 'weit', english: 'far', category: 'Places' },
+    { german: 'nah', english: 'near', category: 'Places' },
+    { german: 'hier', english: 'here', category: 'Places' },
+    { german: 'das Theater', english: 'theater', category: 'Places' },
+    { german: 'die Apotheke', english: 'pharmacy', category: 'Places' },
+    { german: 'der Garten', english: 'garden', category: 'Places' },
 
     // House & Home
     { german: 'das Haus', english: 'house', category: 'Home' },
@@ -294,6 +290,16 @@ const VOCABULARY = [
     { german: 'gehen', english: 'to go', category: 'Verbs' },
     { german: 'kommen', english: 'to come', category: 'Verbs' },
     { german: 'fahren', english: 'to drive / travel', category: 'Verbs' },
+    { german: 'rennen', english: 'to run', category: 'Verbs' },
+    { german: 'spielen', english: 'to play', category: 'Verbs' },
+    { german: 'kochen', english: 'to cook', category: 'Verbs' },
+    { german: 'bleiben', english: 'to stay', category: 'Verbs' },
+    { german: 'arbeiten', english: 'to work', category: 'Verbs' },
+    { german: 'leben', english: 'to live', category: 'Verbs' },
+    { german: 'tun', english: 'to do', category: 'Verbs' },
+    { german: 'rauchen', english: 'to smoke', category: 'Verbs' },
+    { german: 'fragen', english: 'to ask', category: 'Verbs' },
+    { german: 'tragen', english: 'to wear', category: 'Verbs' },
 
     // W Frage
     { german: 'Wo', english: 'Where', category: 'W Frage' },
@@ -350,6 +356,7 @@ const VOCABULARY = [
     { german: 'besuchen', english: 'to visit', category: 'Accusative Verbs' },
     { german: 'anrufen', english: 'to call (on phone)', category: 'Accusative Verbs' },
     { german: 'schreiben', english: 'to write', category: 'Accusative Verbs' },
+
 
     // Dative
     { german: 'helfen', english: 'to help', category: 'Dative Verbs' },
@@ -474,6 +481,7 @@ const VOCABULARY = [
     { german: 'die Fotografie', english: 'photography', category: 'Hobbies' },
     { german: 'das Fitnessstudio', english: 'gym', category: 'Hobbies' },
     { german: 'der Fußball', english: 'football', category: 'Hobbies' },
+    { german: 'das Klavier', english: 'piano', category: 'Hobbies' },
 
 ];
 

@@ -10,9 +10,25 @@ const VOCABULARY = [
     { german: 'Guten Tag', english: 'good day', category: 'Greetings' },
     { german: 'Guten Abend', english: 'good evening', category: 'Greetings' },
     { german: 'Gute Nacht', english: 'good night', category: 'Greetings' },
+    { german: 'willkommen', english: 'welcome', category: 'Greetings' },
     { german: 'Wie geht\'s?', english: 'how are you?', category: 'Greetings' },
     { german: 'Danke', english: 'thank you', category: 'Greetings' },
     { german: 'Bitte', english: 'please / you\'re welcome', category: 'Greetings' },
+    { german: 'leider', english: 'unfortunately', category: 'Greetings' },
+    { german: 'Auf wiedersehen', english: 'goodbye', category: 'Greetings' },
+    // { german: 'Auf widerhoren', english: 'goodbye', category: 'Greetings' },
+    { german: 'nicht schlecht', english: 'not bad', category: 'Greetings' },
+    { german: 'so lala', english: 'so so', category: 'Greetings' },
+    { german: 'freut mich', english: 'nice to meet you', category: 'Greetings' },
+    { german: 'Was machen sie beruflich?', english: 'What do you do professionally?', category: 'Greetings' },
+    { german: 'Ich arbeite als IT-Ingenieur', english: 'I work as an IT engineer', category: 'Greetings' },
+    { german: 'noch einmal', english: 'one more time', category: 'Greetings' },
+
+    // Work
+    { german: 'der Kollege', english: 'colleague', category: 'Work' },
+    { german: 'der Mitarbeiter', english: 'employee', category: 'Work' },
+    { german: 'der Arbeiter', english: 'worker', category: 'Work' },
+
 
     // Personal Information
     { german: 'Ich heiße...', english: 'my name is...', category: 'Personal Info' },
@@ -35,6 +51,7 @@ const VOCABULARY = [
     { german: 'Sprechen Sie Deutsch?', english: 'Do you speak German? (formal)', category: 'Personal Info' },
     { german: 'Ich spreche ein bisschen...', english: 'I speak a little...', category: 'Personal Info' },
     { german: 'meine Muttersprache', english: 'my native language', category: 'Personal Info' },
+    { german: 'der Geburstag', english: 'birthday', category: 'Personal Info' },
 
     // Jobs
     { german: 'der Arzt', english: 'doctor', category: 'Jobs' },
@@ -44,12 +61,14 @@ const VOCABULARY = [
     { german: 'der Mechaniker', english: 'mechanic', category: 'Jobs' },
     { german: 'der Engenieur', english: 'Engineer', category: 'Jobs' },
     { german: 'der Student', english: 'student', category: 'Jobs' },
+
     // Family
     { german: 'die Mutter', english: 'mother', category: 'Family' },
     { german: 'der Vater', english: 'father', category: 'Family' },
     { german: 'die Eltern', english: 'parents', category: 'Family' },
     { german: 'der Bruder', english: 'brother', category: 'Family' },
     { german: 'die Schwester', english: 'sister', category: 'Family' },
+    { german: 'das Geschwister', english: 'siblings', category: 'Family' },
     { german: 'die Frau', english: 'woman / wife', category: 'Family' },
     { german: 'der Mann', english: 'man / husband', category: 'Family' },
     { german: 'das Kind', english: 'child', category: 'Family' },
@@ -85,6 +104,7 @@ const VOCABULARY = [
     { german: 'der honig', english: 'honey', category: 'Food & Drink' },
     { german: 'die Marmelade', english: 'jam', category: 'Food & Drink' },
     { german: 'lecker', english: 'delicious', category: 'Food & Drink' },
+    { german: 'der Käse', english: 'cheese', category: 'Food & Drink' },
 
 
     // fruits
@@ -92,6 +112,17 @@ const VOCABULARY = [
     { german: 'die Apfel', english: 'apple', category: 'Fruits' },
     { german: 'die Banane', english: 'banana', category: 'Fruits' },
     { german: 'die Erdbeere', english: 'strawberry', category: 'Fruits' },
+    { german: 'die Orangen', english: 'orange', category: 'Fruits' },
+
+    // Colors
+    { german: 'die Farbe', english: 'color', category: 'Colors' },
+    { german: 'Blau', english: 'blue', category: 'Colors' },
+    { german: 'Rot', english: 'red', category: 'Colors' },
+    { german: 'Gelb', english: 'yellow', category: 'Colors' },
+    { german: 'Grün', english: 'green', category: 'Colors' },
+    { german: 'Weiß', english: 'white', category: 'Colors' },
+    { german: 'Schwarz', english: 'black', category: 'Colors' },
+    { german: 'Gelb', english: 'yellow', category: 'Colors' },
 
 
     // Dining Items
@@ -124,6 +155,11 @@ const VOCABULARY = [
     { german: 'Stunde', english: 'hour', category: 'Time' },
     { german: 'Minute', english: 'minute', category: 'Time' },
     { german: 'Zeit', english: 'time', category: 'Time' },
+    { german: 'immer', english: 'always', category: 'Time' },
+    { german: 'oft', english: 'often', category: 'Time' },
+    { german: 'manchmal', english: 'sometimes', category: 'Time' },
+    { german: 'selten', english: 'rarely', category: 'Time' },
+    { german: 'nie', english: 'never', category: 'Time' },
     { german: 'Viertel vor fünf', english: 'quarter to five', category: 'Time' },
     { german: 'Viertel nach fünf', english: 'quarter past five', category: 'Time' },
     { german: 'es ist halb acht', english: 'half past seven', category: 'Time' },
@@ -274,6 +310,9 @@ const VOCABULARY = [
     { german: 'der Schrank', english: 'wardrobe', category: 'Home' },
     { german: 'die Wand', english: 'wall', category: 'Home' },
     { german: 'das Sofa', english: 'sofa', category: 'Home' },
+    { german: 'der Vorhang', english: 'curtain', category: 'Home' },
+    { german: 'der Kühlschrank', english: 'fridge', category: 'Home' },
+    { german: 'die Waschmachine', english: 'washing machine', category: 'Home' },
 
     // Verbs
     { german: 'aufstehen', english: 'to get up', category: 'Verbs' },
@@ -300,6 +339,13 @@ const VOCABULARY = [
     { german: 'rauchen', english: 'to smoke', category: 'Verbs' },
     { german: 'fragen', english: 'to ask', category: 'Verbs' },
     { german: 'tragen', english: 'to wear', category: 'Verbs' },
+    { german: 'passieren', english: 'to happen', category: 'Verbs' },
+    { german: 'singen', english: 'to sing', category: 'Verbs' },
+    { german: 'einschlagen', english: 'to fall sleep', category: 'Verbs' },
+    { german: 'vorstellen', english: 'to present', category: 'Verbs' },
+    { german: 'benutzen', english: 'to use', category: 'Verbs' },
+    { german: 'öffnen', english: 'to open', category: 'Verbs' },
+    { german: 'schließen', english: 'to close', category: 'Verbs' },
 
     // W Frage
     { german: 'Wo', english: 'Where', category: 'W Frage' },
@@ -339,6 +385,17 @@ const VOCABULARY = [
     { german: 'der Stift', english: 'pen', category: 'Stationery' },
     { german: 'das Papier', english: 'paper', category: 'Stationery' },
 
+    // Tools
+    { german: 'ArmbandUhr', english: 'wristwatch', category: 'Tools' },
+
+    // Materials
+    { german: 'der Stoff', english: 'fabric', category: 'Materials' },
+    { german: 'das Holz', english: 'wood', category: 'Materials' },
+    { german: 'das Metal', english: 'metal', category: 'Materials' },
+    { german: 'das Leder', english: 'leather', category: 'Materials' },
+    { german: 'das Glas', english: 'glass', category: 'Materials' },
+    { german: 'der Kunststoff', english: 'plastic', category: 'Materials' },
+
 
     // Verb Akkusative
     { german: 'haben', english: 'to have', category: 'Accusative Verbs' },
@@ -356,6 +413,7 @@ const VOCABULARY = [
     { german: 'besuchen', english: 'to visit', category: 'Accusative Verbs' },
     { german: 'anrufen', english: 'to call (on phone)', category: 'Accusative Verbs' },
     { german: 'schreiben', english: 'to write', category: 'Accusative Verbs' },
+    { german: 'kennen', english: 'to know', category: 'Accusative Verbs' },
 
 
     // Dative
@@ -374,6 +432,12 @@ const VOCABULARY = [
     { german: 'wehtun', english: 'to hurt', category: 'Dative Verbs' },
     { german: 'folgen', english: 'to follow', category: 'Dative Verbs' },
     { german: 'passieren', english: 'to happen to', category: 'Dative Verbs' },
+
+    // separatable Verbs
+    { german: 'mitkommen', english: 'to come with', category: 'Separatable Verbs' },
+    { german: 'aufkommen', english: 'to open', category: 'Separatable Verbs' },
+    { german: 'aufmachen', english: 'to make', category: 'Separatable Verbs' },
+    { german: 'mitspielen', english: 'to play with', category: 'Separatable Verbs' },
 
     // Weather
     { german: 'das Wetter', english: 'weather', category: 'Weather' },
@@ -456,7 +520,7 @@ const VOCABULARY = [
     { german: 'schlecht', english: 'bad', category: 'Adjectives' },
     { german: 'freundlich', english: 'friendly', category: 'Adjectives' },
     { german: 'teuer', english: 'expensive', category: 'Adjectives' },
-    { german: 'billig', english: 'cheap', category: 'Adjectives' },
+    { german: 'billig, güenstig', english: 'cheap', category: 'Adjectives' },
     { german: 'einfach', english: 'easy', category: 'Adjectives' },
     { german: 'schwer', english: 'difficult', category: 'Adjectives' },
     { german: 'ruhig', english: 'quiet', category: 'Adjectives' },
@@ -470,6 +534,10 @@ const VOCABULARY = [
     { german: 'müde', english: 'tired', category: 'Adjectives' },
     { german: 'gesund', english: 'healthy', category: 'Adjectives' },
     { german: 'krank', english: 'sick', category: 'Adjectives' },
+    { german: 'lustig', english: 'funny', category: 'Adjectives' },
+    { german: 'müde', english: 'tired', category: 'Adjectives' },
+    { german: 'praktisch', english: 'usefull and practical', category: 'Adjectives' },
+    { german: 'modern', english: 'modern', category: 'Adjectives' },
 
     // Hobbies
     { german: 'die Zeitung', english: 'newspaper', category: 'Hobbies' },

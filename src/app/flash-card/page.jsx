@@ -4,8 +4,6 @@ import { useState, useMemo, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, RotateCw, Search, Volume2, ArrowRightLeft } from 'lucide-react';
 import VOCABULARY from './words';
 
-
-
 const Page = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [isFlipped, setIsFlipped] = useState(false);
@@ -96,21 +94,17 @@ const Page = () => {
         setDifficultyFilter('All');
     };
 
-    const toggleHard = () => {
-        if (!currentCard) return;
-        const newHardWords = new Set(hardWords);
-        if (newHardWords.has(currentCard.id)) {
-            newHardWords.delete(currentCard.id);
-        } else {
-            newHardWords.add(currentCard.id);
+    // Reset currentIndex when filteredVocab changes to prevent "No words found"
+    useEffect(() => {
+        if (currentIndex >= filteredVocab.length && filteredVocab.length > 0) {
+            setCurrentIndex(0);
         }
-        setHardWords(newHardWords);
-    };
+    }, [filteredVocab, currentIndex]);
 
     const isCurrentCardHard = currentCard && hardWords.has(currentCard.id);
 
     return (
-        <div className="min-h-screen bg-linear-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden">
+        <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden">
             {/* Background decorative elements */}
             <div className="fixed inset-0 overflow-hidden pointer-events-none">
                 <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-5"></div>
@@ -149,9 +143,9 @@ const Page = () => {
                             title="Toggle between German→English and English→German"
                         >
                             <ArrowRightLeft className="h-4 w-4" />
-                            {/* <span className="text-sm hidden sm:inline">
+                            <span className="text-sm hidden sm:inline">
                                 {isLanguageReversed ? 'EN→DE' : 'DE→EN'}
-                            </span> */}
+                            </span>
                         </button>
                     </div>
 
@@ -222,22 +216,45 @@ const Page = () => {
                             className="mb-8 cursor-pointer group perspective"
                         >
                             <div className="relative w-full aspect-video max-w-3xl mx-auto">
-                                <div className="absolute inset-0 bg-linear-to-br from-blue-600/40 to-purple-600/40 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                                <div className="relative w-full h-full bg-linear-to-br from-blue-600 to-purple-600 rounded-2xl shadow-2xl p-8 flex flex-col items-center justify-center transition-all duration-300 group-hover:shadow-2xl group-hover:shadow-blue-500/50 border border-blue-500/20">
-                                    {/* Hard/Easy Toggle Button */}
-                                    <button
-                                        onClick={(e) => {
-                                            e.stopPropagation();
-                                            toggleHard();
-                                        }}
-                                        className={`absolute top-4 right-4 px-3 py-1.5 rounded-full text-xs font-semibold transition ${isCurrentCardHard
-                                            ? 'bg-red-500/80 text-white'
-                                            : 'bg-green-500/60 text-white hover:bg-green-500/80'
-                                            }`}
-                                        title="Mark as hard/easy"
-                                    >
-                                        {isCurrentCardHard ? '🔴 Hard' : '🟢 Easy'}
-                                    </button>
+                                <div className="absolute inset-0 bg-gradient-to-br from-blue-600/40 to-purple-600/40 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                <div className="relative w-full h-full bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl shadow-2xl p-8 flex flex-col items-center justify-center transition-all duration-300 group-hover:shadow-2xl group-hover:shadow-blue-500/50 border border-blue-500/20">
+                                    {/* Easy/Hard Buttons */}
+                                    <div className="absolute top-4 right-4 flex gap-2">
+                                        <button
+                                            onClick={(e) => {
+                                                e.stopPropagation();
+                                                if (currentCard && hardWords.has(currentCard.id)) {
+                                                    const newHardWords = new Set(hardWords);
+                                                    newHardWords.delete(currentCard.id);
+                                                    setHardWords(newHardWords);
+                                                }
+                                            }}
+                                            className={`px-3 py-1.5 rounded-full text-xs font-semibold transition ${!isCurrentCardHard
+                                                ? 'bg-green-500/80 text-white shadow-lg shadow-green-500/50'
+                                                : 'bg-green-500/30 text-green-200 hover:bg-green-500/50'
+                                                }`}
+                                            title="Mark as easy"
+                                        >
+                                            🟢 Easy
+                                        </button>
+                                        <button
+                                            onClick={(e) => {
+                                                e.stopPropagation();
+                                                if (currentCard && !hardWords.has(currentCard.id)) {
+                                                    const newHardWords = new Set(hardWords);
+                                                    newHardWords.add(currentCard.id);
+                                                    setHardWords(newHardWords);
+                                                }
+                                            }}
+                                            className={`px-3 py-1.5 rounded-full text-xs font-semibold transition ${isCurrentCardHard
+                                                ? 'bg-red-500/80 text-white shadow-lg shadow-red-500/50'
+                                                : 'bg-red-500/30 text-red-200 hover:bg-red-500/50'
+                                                }`}
+                                            title="Mark as hard"
+                                        >
+                                            🔴 Hard
+                                        </button>
+                                    </div>
 
                                     {/* Front side */}
                                     {!isFlipped && (
@@ -307,7 +324,7 @@ const Page = () => {
                                 </div>
                                 <div className="w-full bg-slate-700/50 rounded-full h-2.5 overflow-hidden">
                                     <div
-                                        className="bg-linear-to-r from-blue-500 via-purple-500 to-cyan-500 h-2.5 rounded-full transition-all duration-300"
+                                        className="bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-500 h-2.5 rounded-full transition-all duration-300"
                                         style={{
                                             width: `${((currentIndex + 1) / filteredVocab.length) * 100}%`,
                                         }}
@@ -376,7 +393,7 @@ const Page = () => {
                         </div>
                         <button
                             onClick={handleReset}
-                            className="px-6 py-3 bg-linear-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 rounded-lg text-white font-medium transition shadow-lg shadow-blue-500/30"
+                            className="px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 rounded-lg text-white font-medium transition shadow-lg shadow-blue-500/30"
                         >
                             Reset All Filters
                         </button>

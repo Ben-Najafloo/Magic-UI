@@ -262,7 +262,7 @@ const Page = () => {
                                             <p className="text-slate-200 text-sm font-medium mb-4 opacity-75  absolute top-4 left-4">
                                                 {isLanguageReversed ? 'English' : 'German'}
                                             </p>
-                                            <h2 className="text-5xl md:text-6xl font-bold text-white mb-6 drop-shadow-lg">
+                                            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 drop-shadow-lg mt-9">
                                                 {isLanguageReversed
                                                     ? currentCard?.english
                                                     : currentCard?.german}
@@ -279,7 +279,7 @@ const Page = () => {
                                             <p className="text-slate-200 text-sm font-medium mb-4 opacity-75  absolute top-4 left-4">
                                                 {isLanguageReversed ? 'German' : 'English'}
                                             </p>
-                                            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 drop-shadow-lg">
+                                            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 drop-shadow-lg mt-9">
                                                 {isLanguageReversed
                                                     ? currentCard?.german
                                                     : currentCard?.english}

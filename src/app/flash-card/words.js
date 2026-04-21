@@ -342,7 +342,7 @@ const VOCABULARY = [
     { id: 339, german: 'rennen / laufen', english: 'to run', category: 'Verbs' },
     { id: 340, german: 'spielen', english: 'to play', category: 'Verbs' },
     { id: 341, german: 'kochen', english: 'to cook', category: 'Verbs' },
-    { id: 342, german: 'bleiben', english: 'to stay', category: 'Verbs' },
+    { id: 342, german: 'bleiben', english: 'to stay, remain', category: 'Verbs' },
     { id: 343, german: 'arbeiten', english: 'to work', category: 'Verbs' },
     { id: 344, german: 'leben', english: 'to live', category: 'Verbs' },
     { id: 345, german: 'tun', english: 'to do', category: 'Verbs' },
@@ -519,7 +519,7 @@ const VOCABULARY = [
     { id: 516, german: 'die Tablette', english: 'tablet', category: 'Health' },
     { id: 517, german: 'der Schmerz', english: 'pain', category: 'Health' },
     { id: 518, german: 'das Fieber', english: 'fever', category: 'Health' },
-    { id: 519, german: 'die Erkältung', english: 'cold', category: 'Health' },
+    { id: 519, german: 'die Erkältung', english: 'cold (sick)', category: 'Health' },
     { id: 520, german: 'der Husten', english: 'cough', category: 'Health' },
     { id: 521, german: 'der Kopf', english: 'head', category: 'Body' },
     { id: 522, german: 'die Hand', english: 'hand', category: 'Body' },
@@ -805,9 +805,9 @@ const VOCABULARY = [
     { id: 801, german: 'das Gehalt', english: 'salary', category: 'Work' },
     { id: 802, german: 'der Grund', english: 'the reason', category: 'General' },
     { id: 803, german: 'diesen', english: 'this', category: 'Conjunctions' },
-    { id: 804, german: '', english: '', category: '' },
-    { id: 805, german: '', english: '', category: '' },
-    { id: 806, german: '', english: '', category: '' },
+    { id: 804, german: 'zumachen', english: 'to close', category: 'Verbs' },
+    { id: 805, german: 'anmachen', english: 'to turn on (light/tech)', category: 'Verbs' },
+    { id: 806, german: 'ausmachen', english: 'to turn off', category: 'Verbs' },
 ];
 
 

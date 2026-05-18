@@ -1,7 +1,7 @@
 "use client"
 
 import { useParams } from "next/navigation";
-import ProjectCard from "../../../components/ProjectCard";
+import ProjectCard from "../../../../components/ProjectCard";
 import projects from "../projects";
 
 const Page = () => {

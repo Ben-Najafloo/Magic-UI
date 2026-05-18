@@ -57,8 +57,8 @@ export default function Project2Page() {
                 title: "Nuovo Espresso 1",
                 price: 49,
                 modules: 13,
-                wideicon: "/ax/wide-ns1.jpg",
-                icon: "/ax/ns1.PNG",
+                wideicon: "https://creativityqf.b-cdn.net/extra/wide-ns1.jpg",
+                icon: "https://creativityqf.b-cdn.net/extra/ns1.png",
                 lessons: 45,
             },
             {
@@ -66,8 +66,8 @@ export default function Project2Page() {
                 title: "Nuovo Espresso 2",
                 price: 59,
                 modules: 15,
-                wideicon: "/ax/wide-ns2.jpg",
-                icon: "/ax/ns2.PNG",
+                wideicon: "https://creativityqf.b-cdn.net/extra/wide-ns2.jpg",
+                icon: "https://creativityqf.b-cdn.net/extra/ns2.png",
                 lessons: 52,
             },
             {
@@ -75,8 +75,8 @@ export default function Project2Page() {
                 title: "Nuovo Espresso 3",
                 price: 69,
                 modules: 18,
-                wideicon: "/ax/wide-ns3.jpg",
-                icon: "/ax/ns3.jfif",
+                wideicon: "https://creativityqf.b-cdn.net/extra/wide-ns3.jpg",
+                icon: "https://creativityqf.b-cdn.net/extra/ns3.jfif",
                 lessons: 65,
             },
             {
@@ -84,8 +84,8 @@ export default function Project2Page() {
                 title: "Nuovo Espresso 4",
                 price: 79,
                 modules: 20,
-                wideicon: "/ax/wide-ns4.jpg",
-                icon: "/ax/ns4.jfif",
+                wideicon: "https://creativityqf.b-cdn.net/extra/wide-ns4.jpg",
+                icon: "https://creativityqf.b-cdn.net/extra/ns4.jfif",
                 lessons: 72,
             },
             {
@@ -93,8 +93,8 @@ export default function Project2Page() {
                 title: "Nuovo Espresso 5",
                 price: 64,
                 modules: 14,
-                wideicon: "/ax/wide-ns5.jpg",
-                icon: "/ax/ns5.PNG",
+                wideicon: "https://creativityqf.b-cdn.net/extra/wide-ns5.jpg",
+                icon: "https://creativityqf.b-cdn.net/extra/ns5.png",
                 lessons: 48,
             },
             {
@@ -102,8 +102,8 @@ export default function Project2Page() {
                 title: "Nuovo Espresso 6",
                 price: 74,
                 modules: 16,
-                wideicon: "/ax/wide-ns6.jpg",
-                icon: "/ax/ns6.jfif",
+                wideicon: "https://creativityqf.b-cdn.net/extra/wide-ns6.jpg",
+                icon: "https://creativityqf.b-cdn.net/extra/ns6.jfif",
                 lessons: 58,
             },
         ],
@@ -385,7 +385,7 @@ export default function Project2Page() {
 
                     <div className="flex justify-between items-center py-4">
                         <div className="cursor-pointer" onClick={goHome}>
-                            <Image src="/ax/logo.PNG" width={80} height={80} alt="Logo" />
+                            <Image src="https://creativityqf.b-cdn.net/extra/logo.png" width={80} height={80} alt="Logo" />
                         </div>
                         <div className="hidden sm:block flex flex-wrap gap-2">
                             <Button variant="ghost" onClick={goHome}>
@@ -575,7 +575,7 @@ export default function Project2Page() {
             {/* Course Detail Page */}
             {currentPage === "course-detail" && (
                 <>
-                    <div className="bg-linear-to-r from-[#185fa5] to-[#0d4a85] text-white py-16">
+                    <div className="pt-12">
                         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                             <h1 className="text-3xl md:text-4xl font-bold mb-4">{currentCourse.title}</h1>
                             <div className="flex flex-wrap gap-4 text-sm">

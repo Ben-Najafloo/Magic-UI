@@ -824,7 +824,7 @@ export default function Project2Page() {
                     <div className="flex justify-between items-center mb-6">
                         <div>
                             <h2 className="text-3xl font-bold">Admin Dashboard</h2>
-                            <p className="text-gray-600">Manage courses, users, and enrollments</p>
+                            <p className="text-gray-600 dark:text-gray-400">Manage courses, users, and enrollments</p>
                         </div>
                         <Badge className="bg-[#185fa5]">ADMIN</Badge>
                     </div>
@@ -832,19 +832,19 @@ export default function Project2Page() {
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
                         <Card>
                             <CardContent className="p-6">
-                                <div className="text-gray-600 mb-2">Total Users</div>
+                                <div className="text-gray-600 dark:text-gray-400 mb-2">Total Users</div>
                                 <div className="text-3xl font-bold text-[#185fa5]">42</div>
                             </CardContent>
                         </Card>
                         <Card>
                             <CardContent className="p-6">
-                                <div className="text-gray-600 mb-2">Revenue</div>
+                                <div className="text-gray-600 dark:text-gray-400 mb-2">Revenue</div>
                                 <div className="text-3xl font-bold text-[#185fa5]">€3,950</div>
                             </CardContent>
                         </Card>
                         <Card>
                             <CardContent className="p-6">
-                                <div className="text-gray-600 mb-2">Enrollments</div>
+                                <div className="text-gray-600 dark:text-gray-400 mb-2">Enrollments</div>
                                 <div className="text-3xl font-bold text-[#185fa5]">87</div>
                             </CardContent>
                         </Card>

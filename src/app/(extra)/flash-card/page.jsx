@@ -249,9 +249,9 @@ const Page = () => {
                             onClick={() => setIsFlipped(!isFlipped)}
                             className="mb-8 cursor-pointer group perspective"
                         >
-                            <div className="relative w-full aspect-video max-w-3xl mx-auto">
-                                <div className="absolute inset-0 bg-linear-to-br from-blue-600/40 to-purple-600/40 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                                <div className="relative w-full h-full bg-linear-to-br from-blue-600 to-purple-600 rounded-2xl shadow-2xl p-8 flex flex-col items-center justify-center transition-all duration-300 group-hover:shadow-2xl group-hover:shadow-blue-500/50 border border-blue-500/20">
+                            <div className="relative w-full aspect-video max-w-5xl mx-auto h-80 md:h-96">
+                                <div className="absolute inset-0 bg-linear-to-br from-blue-700/40 to-purple-800/40 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                <div className="relative w-full h-full bg-linear-to-br from-blue-800 to-purple-900 rounded-2xl shadow-2xl p-8 flex flex-col items-center justify-center transition-all duration-300 group-hover:shadow-2xl group-hover:shadow-blue-500/50 border border-blue-500/20">
                                     {/* Easy/Hard Buttons */}
                                     <div className="absolute top-4 right-4 flex gap-2">
                                         <button
@@ -291,10 +291,10 @@ const Page = () => {
                                     </div>
 
                                     {/* Navigation buttons */}
-                                    <div className="absolute bottom-2 flex gap-4 items-center">
+                                    <div className="absolute bottom-2 flex justify-between w-full px-2">
                                         <button
                                             onClick={handlePrev}
-                                            className="md:p-3 p-1 rounded-lg bg-slate-700/50 hover:bg-slate-600/50 transition text-white border border-slate-600/40 hover:border-slate-500/60"
+                                            className="md:p-3 p-3 rounded-lg bg-slate-700/50 hover:bg-slate-600/50 transition text-white border border-slate-600/40 hover:border-slate-500/60"
                                             aria-label="Previous card"
                                         >
                                             <ChevronLeft className="md:h-5 md:w-5 h-3 w-3" />
@@ -302,7 +302,7 @@ const Page = () => {
 
                                         <button
                                             onClick={handleReset}
-                                            className="md:px-6 md:py-3 px-3 py-1 rounded-lg bg-slate-700/50 hover:bg-slate-600/50 transition text-white flex items-center gap-2 font-medium border border-slate-600/40 hover:border-slate-500/60"
+                                            className="w-full mx-2 justify-center md:px-6 md:py-3 px-3 py-3 rounded-lg bg-slate-700/50 hover:bg-slate-600/50 transition text-white flex items-center gap-2 font-medium border border-slate-600/40 hover:border-slate-500/60"
                                         >
                                             <RotateCw className="md:h-4 md:w-4 h-3 w-3" />
                                             <span className='md:text-sm text-xs'>Reset</span>
@@ -310,7 +310,7 @@ const Page = () => {
 
                                         <button
                                             onClick={handleNext}
-                                            className="md:p-3 p-1 rounded-lg bg-slate-700/50 hover:bg-slate-600/50 transition text-white border border-slate-600/40 hover:border-slate-500/60"
+                                            className="md:p-3 p-3 rounded-lg bg-slate-700/50 hover:bg-slate-600/50 transition text-white border border-slate-600/40 hover:border-slate-500/60"
                                             aria-label="Next card"
                                         >
                                             <ChevronRight className="md:h-5 md:w-5 h-3 w-3" />
@@ -376,7 +376,7 @@ const Page = () => {
                         {/* Progress */}
                         <div className="flex flex-col items-center gap-6">
                             {/* Progress indicator */}
-                            <div className="w-full max-w-sm">
+                            <div className="w-full max-w-5xl">
                                 <div className="flex justify-between text-sm text-slate-400 mb-2">
                                     <span className="font-medium">Progress</span>
                                     <span className="font-mono text-blue-400">

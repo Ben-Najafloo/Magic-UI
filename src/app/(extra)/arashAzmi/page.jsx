@@ -588,26 +588,26 @@ export default function Project2Page() {
 
                         <div className="flex flex-col lg:flex-row gap-8">
                             <div className="flex-1">
-                                <div className="bg-white rounded-lg border p-6 mb-6">
+                                <div className="bg-white dark:bg-gray-950 rounded-lg border p-6 mb-6">
                                     <h2 className="text-2xl font-semibold mb-4">About This Course</h2>
-                                    <p className="text-gray-600">
+                                    <p className="text-gray-600 dark:text-gray-300">
                                         NUOVO Espresso 1 is the first of six volumes of the NUOVO Espresso Italian
                                         course for foreigners.
                                     </p>
                                 </div>
 
-                                <div className="bg-white rounded-lg border p-6">
+                                <div className="bg-white dark:bg-gray-950 rounded-lg border p-6">
                                     <h2 className="text-2xl font-semibold mb-4">Course Structure</h2>
                                     <div className="space-y-3">
                                         {courseModules.map((module, idx) => (
                                             <div
                                                 key={idx}
-                                                className="p-4 bg-gray-50 border-l-4 border-[#185fa5] rounded"
+                                                className="p-4 bg-gray-50 dark:bg-gray-950 border-l-4 border-[#185fa5] rounded"
                                             >
                                                 <h4 className="font-semibold">
                                                     Module {idx + 1}: {module.name}
                                                 </h4>
-                                                <p className="text-sm text-gray-600">{module.lessons} lessons</p>
+                                                <p className="text-sm text-gray-600 dark:text-gray-300">{module.lessons} lessons</p>
                                             </div>
                                         ))}
                                     </div>
@@ -615,7 +615,7 @@ export default function Project2Page() {
                             </div>
 
                             <div className="lg:w-80">
-                                <div className="bg-white rounded-lg border p-6 sticky top-24">
+                                <div className="bg-white dark:bg-gray-950 rounded-lg border p-6 sticky top-24">
                                     <h3 className="text-xl font-semibold mb-4">Enroll Now</h3>
                                     <div className="text-4xl font-bold text-[#185fa5] mb-6">
                                         €{currentCourse.price}
@@ -639,7 +639,7 @@ export default function Project2Page() {
                     <Card className="w-full max-w-md">
                         <CardContent className="p-6">
                             <h2 className="text-2xl font-bold text-center mb-2">Create Your Account</h2>
-                            <p className="text-center text-gray-600 mb-6">
+                            <p className="text-center text-gray-600 dark:text-gray-300 mb-6">
                                 Join thousands of students learning from ArashAzmi
                             </p>
 
@@ -695,7 +695,7 @@ export default function Project2Page() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
                     <div className="mb-8">
                         <h1 className="text-3xl font-bold">Welcome back, {currentUser?.name} 👋</h1>
-                        <p className="text-gray-600">Continue learning and achieve your goals</p>
+                        <p className="text-gray-600 dark:text-gray-300">Continue learning and achieve your goals</p>
                     </div>
 
                     <h2 className="text-2xl font-semibold mb-4">My Enrolled Courses</h2>
@@ -703,7 +703,7 @@ export default function Project2Page() {
                     {enrolledCourses.length === 0 ? (
                         <Card className="text-center py-12">
                             <CardContent>
-                                <p className="text-gray-600 mb-4">No courses enrolled yet</p>
+                                <p className="text-gray-600 dark:text-gray-300 mb-4">No courses enrolled yet</p>
                                 <Button onClick={goHome}>Browse Courses</Button>
                             </CardContent>
                         </Card>
@@ -726,7 +726,7 @@ export default function Project2Page() {
                                             <div className="flex-1 w-full">
                                                 <h3 className="text-lg font-semibold mb-2">{course.title}</h3>
                                                 <Progress value={enrollment.progress} className="h-2" />
-                                                <div className="text-sm text-gray-600 mt-1">{enrollment.progress}% complete</div>
+                                                <div className="text-sm text-gray-600 dark:text-gray-300 mt-1">{enrollment.progress}% complete</div>
                                             </div>
                                             <Button variant="outline" className="w-full sm:w-auto">
                                                 Continue Learning
@@ -761,10 +761,10 @@ export default function Project2Page() {
                         </div>
                     </div>
 
-                    <div className="bg-gray-50 rounded-lg p-6 mb-8">
+                    <div className="bg-gray-50 dark:bg-gray-950 rounded-lg p-6 mb-8">
                         <h2 className="text-2xl font-semibold mb-2">Lesson 2: Variables & Data Types</h2>
-                        <div className="text-gray-600 mb-4">Module 1: {currentCourse.title}</div>
-                        <p className="text-gray-700 mb-4">
+                        <div className="text-gray-600 dark:text-gray-300 mb-4">Module 1: {currentCourse.title}</div>
+                        <p className="text-gray-700 dark:text-gray-200 mb-4">
                             Learn variables, types, structures, and modern patterns.
                         </p>
                         <div className="flex gap-3">
@@ -775,7 +775,7 @@ export default function Project2Page() {
                         </div>
                     </div>
 
-                    <div className="bg-white rounded-lg border">
+                    <div className="bg-white dark:bg-gray-950 rounded-lg border">
                         <h2 className="text-xl font-semibold p-4 border-b">Course Structure</h2>
                         {generateModules(8).map((module, idx) => (
                             <div key={idx} className="border-b last:border-b-0">

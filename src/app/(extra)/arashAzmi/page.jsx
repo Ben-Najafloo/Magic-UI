@@ -48,6 +48,7 @@ import {
 import { FlickeringGrid } from "@/components/ui/flickering-grid";
 import { InteractiveGridPattern } from "@/components/ui/interactive-grid-pattern";
 import { CardSpotlight } from "@/components/ui/card-spotlight";
+import { ModeToggle } from "@/components/ModeToggle";
 
 export default function Project2Page() {
     const courses = useMemo(
@@ -380,12 +381,12 @@ export default function Project2Page() {
     return (
         <>
             {/* Header */}
-            <header className="sticky top-0 z-50 border-b border-gray-200">
+            <header className="sticky top-0 z-50 bg-white dark:bg-black border-b border-gray-200 dark:border-gray-700">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-                    <div className="flex justify-between items-center py-4">
+                    <div className="flex justify-between items-center py-1">
                         <div className="cursor-pointer" onClick={goHome}>
-                            <Image src="https://creativityqf.b-cdn.net/extra/logo.png" width={80} height={80} alt="Logo" />
+                            <Image src="https://creativityqf.b-cdn.net/extra/logo.png" width={80} height={80} alt="Logo" className="dark:invert" />
                         </div>
                         <div className="hidden sm:block flex flex-wrap gap-2">
                             <Button variant="ghost" onClick={goHome}>
@@ -398,19 +399,21 @@ export default function Project2Page() {
                                 Admin
                             </Button>
                             {!currentUser ? (
-                                <Button onClick={() => showPage("auth")}>Login</Button>
+                                <Button className="mr-2" onClick={() => showPage("auth")}>Login</Button>
                             ) : (
-                                <Button variant="destructive" onClick={logout}>
+                                <Button className="mr-2" variant="destructive" onClick={logout}>
                                     Logout
                                 </Button>
                             )}
+                            <ModeToggle className="ml-2" />
                         </div>
 
+
                         {/* mobile mode */}
-                        <div className="md:hidden">
+                        <div className="md:hidden flex gap-x-2">
                             <DropdownMenu>
                                 <DropdownMenuTrigger asChild>
-                                    <Menu />
+                                    <Menu size={40} className="text-black dark:text-white pb-1" />
                                 </DropdownMenuTrigger>
                                 <DropdownMenuContent>
                                     <DropdownMenuItem onClick={goHome}>
@@ -440,18 +443,16 @@ export default function Project2Page() {
 
                                 </DropdownMenuContent>
                             </DropdownMenu>
+                            <ModeToggle />
                         </div>
                     </div>
                 </div>
-
-
-
             </header>
 
             {/* Home Page */}
             {currentPage === "home" && (
                 <>
-                    <section className="relative overflow-hidden bg-gradient-to-br from-amber-50 via-orange-50 to-emerald-50/30 py-10 lg:py-20">
+                    <section className="relative overflow-hidden bg-white dark:bg-gray-950 py-10 lg:py-24">
                         {/* Subtle Background Decorative Elements */}
                         <div className="absolute top-0 left-1/4 -z-10 h-72 w-72 rounded-full bg-orange-200/30 blur-3xl"></div>
                         <div className="absolute bottom-10 right-1/4 -z-10 h-96 w-96 rounded-full bg-emerald-200/20 blur-3xl"></div>
@@ -461,20 +462,16 @@ export default function Project2Page() {
 
                                 {/* Left Column: Content */}
                                 <div className="text-center lg:col-span-7 lg:text-left">
-                                    {/* Floating Badge */}
-                                    {/* <span className="inline-flex items-center gap-1.5 rounded-full bg-emerald-100 px-3 py-1 text-sm font-medium text-emerald-800">
-                                        <span className="flex h-2 w-2 rounded-full bg-emerald-500"></span>
-                                        Speak like a local from day one
-                                    </span> */}
 
                                     {/* Main Headline */}
                                     <h1 className="mt-6 text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl md:text-6xl">
                                         <span className="text-green-500">Master Italian.</span> <br />
-                                        Live the <span className="bg-gradient-to-r from-red-600 to-red-300 bg-clip-text text-transparent">Dolce Vita.</span>
+                                        <span className="text-black dark:text-white">Live the </span>
+                                        <span className="bg-gradient-to-r from-red-600 to-red-300 bg-clip-text text-transparent">Dolce Vita.</span>
                                     </h1>
 
                                     {/* Subtitle */}
-                                    <p className="mt-6 text-lg leading-relaxed text-slate-600 max-w-2xl mx-auto lg:mx-0">
+                                    <p className="mt-6 text-lg leading-relaxed text-slate-600 dark:text-slate-300 max-w-2xl mx-auto lg:mx-0">
                                         Master conversational Italian at your own pace with bite-sized, on-demand video
                                         lessons designed for real life.
                                     </p>
@@ -511,17 +508,17 @@ export default function Project2Page() {
 
                                 {/* Right Column: Visual Component */}
                                 <div className="relative lg:col-span-5 flex justify-center">
-                                    <div className="relative w-full max-w-md overflow-hidden rounded-2xl bg-white p-3 shadow-xl shadow-slate-200/80 ring-1 ring-slate-100">
+                                    <div className="relative w-full max-w-md overflow-hidden rounded-2xl bg-white dark:bg-gray-950 p-3 shadow-xl shadow-slate-200/80 dark:shadow-slate-700/80 ring-1 ring-slate-100 dark:ring-slate-700">
 
                                         {/* Interactive Phrase Overlay */}
-                                        <div className="mt-4 p-3 bg-slate-50 rounded-xl border border-slate-100">
+                                        <div className="mt-4 p-3">
                                             <div className="flex items-start gap-3">
                                                 <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-emerald-500 text-white font-bold text-xl shadow-md">
                                                     🇮🇹
                                                 </div>
                                                 <div>
-                                                    <p className="font-bold text-slate-800 text-lg italic">"Buongiorno! Un caffè, per favore."</p>
-                                                    <p className="text-sm text-slate-500 mt-0.5">Good morning! A coffee, please.</p>
+                                                    <p className="font-bold text-slate-800 dark:text-slate-200 text-lg italic">"Buongiorno! Un caffè, per favore."</p>
+                                                    <p className="text-sm text-slate-500 dark:text-slate-400 mt-0.5">Good morning! A coffee, please.</p>
                                                 </div>
                                                 <button className="ml-auto rounded-full p-2 bg-white shadow-sm hover:bg-slate-100 text-slate-600 transition-colors">
                                                     <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor">
@@ -537,10 +534,6 @@ export default function Project2Page() {
                         </div>
                     </section>
 
-
-
-
-
                     <section className="py-28">
                         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                             <h2 className="text-3xl font-bold text-gray-900 mb-8">Featured Courses</h2>
@@ -548,7 +541,7 @@ export default function Project2Page() {
                                 {courses.map((course) => (
                                     <Card
                                         key={course.id}
-                                        className="cursor-pointer hover:shadow-lg transition-shadow"
+                                        className="cursor-pointer hover:shadow-lg transition-shadow pt-0"
                                         onClick={() => viewCourseDetail(course.id)}
                                     >
                                         <img
@@ -558,7 +551,7 @@ export default function Project2Page() {
                                         />
                                         <CardContent className="p-4">
                                             <h3 className="text-xl font-semibold mb-2">{course.title}</h3>
-                                            <p className="text-gray-600 mb-2">
+                                            <p className="text-gray-600 dark:text-gray-400 mb-2">
                                                 {course.modules} modules • {course.lessons} lessons
                                             </p>
                                             <div className="text-2xl font-bold text-[#185fa5] mb-4">€{course.price}</div>

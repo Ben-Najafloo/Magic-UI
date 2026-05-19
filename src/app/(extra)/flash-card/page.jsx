@@ -4,6 +4,16 @@ import { useState, useMemo, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, RotateCw, Search, Volume2, ArrowRightLeft } from 'lucide-react';
 import VOCABULARY from './words';
 
+import {
+    Select,
+    SelectContent,
+    SelectGroup,
+    SelectItem,
+    SelectLabel,
+    SelectTrigger,
+    SelectValue,
+} from "@/components/ui/select"
+
 const Page = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [isFlipped, setIsFlipped] = useState(false);
@@ -53,10 +63,19 @@ const Page = () => {
         }
     }, [isLanguageReversed, isClient]);
 
-    const categories = ['All', ...new Set(VOCABULARY.map((v) => v.category))];
+    const [currentLevel, setCurrentLevel] = useState('A1');
+    const currentLevelWords = useMemo(() =>
+        VOCABULARY.filter(item => item.level === currentLevel),
+        [currentLevel]
+    );
+
+    // const level = 'A2';
+    // const levelA1 = VOCABULARY.filter((item) => item.level === level);
+
+    const categories = ['All', ...new Set(currentLevelWords.map((v) => v.category))];
 
     const filteredVocab = useMemo(() => {
-        return VOCABULARY.filter((item) => {
+        return currentLevelWords.filter((item) => {
             const matchesSearch =
                 item.german.toLowerCase().includes(searchTerm.toLowerCase()) ||
                 item.english.toLowerCase().includes(searchTerm.toLowerCase());
@@ -104,7 +123,7 @@ const Page = () => {
     const isCurrentCardHard = currentCard && hardWords.has(currentCard.id);
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden">
+        <div className="min-h-screen bg-linear-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden">
             {/* Background decorative elements */}
             <div className="fixed inset-0 overflow-hidden pointer-events-none">
                 <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-5"></div>
@@ -112,13 +131,13 @@ const Page = () => {
                 <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl opacity-3"></div>
             </div>
 
-            <div className="relative z-10 max-w-5xl mx-auto px-4 pt-16 pb-12">
+            <div className="relative z-10 max-w-5xl mx-auto px-4 pt-6 pb-12">
                 {/* Controls */}
                 <div className="space-y-4 mb-8">
                     {/* Top row: Search and Language Toggle */}
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div className="md:flex gap-1">
                         {/* Search */}
-                        <div className="md:col-span-2 relative">
+                        <div className="md:col-span-2 relative md:w-3/4 mb-2 sm:mb-0">
                             <Search className="absolute left-4 top-3.5 h-5 w-5 text-slate-500" />
                             <input
                                 type="text"
@@ -134,19 +153,34 @@ const Page = () => {
                         </div>
 
                         {/* Language Direction Toggle */}
-                        <button
-                            onClick={() => setIsLanguageReversed(!isLanguageReversed)}
-                            className={`px-4 py-3 rounded-lg font-medium transition flex items-center justify-center gap-2 border ${isLanguageReversed
-                                ? 'bg-cyan-500/20 border-cyan-500/50 text-cyan-300 hover:bg-cyan-500/30'
-                                : 'bg-slate-700/40 border-slate-600/60 text-slate-300 hover:bg-slate-600/40'
-                                }`}
-                            title="Toggle between German→English and English→German"
-                        >
-                            <ArrowRightLeft className="h-4 w-4" />
-                            <span className="text-sm hidden sm:inline">
-                                {isLanguageReversed ? 'EN→DE' : 'DE→EN'}
-                            </span>
-                        </button>
+                        <div className='md:w-1/4 flex gap-x-2'>
+                            <button
+                                onClick={() => setIsLanguageReversed(!isLanguageReversed)}
+                                className={`px-4 py-3 rounded-lg font-medium transition flex items-center justify-center gap-2 border ${isLanguageReversed
+                                    ? 'bg-cyan-500/20 border-cyan-500/50 text-cyan-300 hover:bg-cyan-500/30'
+                                    : 'bg-slate-700/40 border-slate-600/60 text-slate-300 hover:bg-slate-600/40'
+                                    }`}
+                                title="Toggle between German→English and English→German"
+                            >
+                                <ArrowRightLeft className="h-4 w-4" />
+                                <span className="text-sm hidden sm:inline">
+                                    {isLanguageReversed ? 'EN → DE' : 'DE → EN'}
+                                </span>
+                            </button>
+                            <Select onValueChange={(value) => setCurrentLevel(value)} value={currentLevel}>
+                                <SelectTrigger className="w-full max-w-28 py-6">
+                                    <SelectValue placeholder="Level" />
+                                </SelectTrigger>
+                                <SelectContent>
+                                    <SelectGroup>
+                                        <SelectLabel>Level</SelectLabel>
+                                        <SelectItem value="A1">A 1</SelectItem>
+                                        <SelectItem value="A2">A 2</SelectItem>
+                                    </SelectGroup>
+                                </SelectContent>
+                            </Select>
+                        </div>
+
                     </div>
 
                     {/* Category Filter */}
@@ -180,27 +214,27 @@ const Page = () => {
                             Difficulty
                         </p>
                         <div className="flex gap-2">
-                            {['All', 'Easy', 'Hard'].map((level) => (
+                            {['All', 'Easy', 'Hard'].map((difficulty) => (
                                 <button
-                                    key={level}
+                                    key={difficulty}
                                     onClick={() => {
-                                        setDifficultyFilter(level);
+                                        setDifficultyFilter(difficulty);
                                         setCurrentIndex(0);
                                         setIsFlipped(false);
                                     }}
-                                    className={`px-4 py-2 rounded-full text-sm font-medium transition ${difficultyFilter === level
-                                        ? level === 'Hard'
+                                    className={`px-4 py-2 rounded-full text-sm font-medium transition ${difficultyFilter === difficulty
+                                        ? difficulty === 'Hard'
                                             ? 'bg-red-500/80 text-white shadow-lg shadow-red-500/50'
-                                            : level === 'Easy'
+                                            : difficulty === 'Easy'
                                                 ? 'bg-green-500/80 text-white shadow-lg shadow-green-500/50'
                                                 : 'bg-blue-500 text-white shadow-lg shadow-blue-500/50'
                                         : 'bg-slate-700/40 text-slate-300 hover:bg-slate-600/40 border border-slate-600/40'
                                         }`}
                                 >
-                                    {level}
-                                    {level !== 'All' && ` (${level === 'Hard'
+                                    {difficulty}
+                                    {difficulty !== 'All' && ` (${difficulty === 'Hard'
                                         ? hardWords.size
-                                        : VOCABULARY.length - hardWords.size
+                                        : currentLevelWords.length - hardWords.size
                                         })`}
                                 </button>
                             ))}
@@ -216,8 +250,8 @@ const Page = () => {
                             className="mb-8 cursor-pointer group perspective"
                         >
                             <div className="relative w-full aspect-video max-w-3xl mx-auto">
-                                <div className="absolute inset-0 bg-gradient-to-br from-blue-600/40 to-purple-600/40 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                                <div className="relative w-full h-full bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl shadow-2xl p-8 flex flex-col items-center justify-center transition-all duration-300 group-hover:shadow-2xl group-hover:shadow-blue-500/50 border border-blue-500/20">
+                                <div className="absolute inset-0 bg-linear-to-br from-blue-600/40 to-purple-600/40 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                <div className="relative w-full h-full bg-linear-to-br from-blue-600 to-purple-600 rounded-2xl shadow-2xl p-8 flex flex-col items-center justify-center transition-all duration-300 group-hover:shadow-2xl group-hover:shadow-blue-500/50 border border-blue-500/20">
                                     {/* Easy/Hard Buttons */}
                                     <div className="absolute top-4 right-4 flex gap-2">
                                         <button
@@ -256,20 +290,47 @@ const Page = () => {
                                         </button>
                                     </div>
 
+                                    {/* Navigation buttons */}
+                                    <div className="absolute bottom-2 flex gap-4 items-center">
+                                        <button
+                                            onClick={handlePrev}
+                                            className="md:p-3 p-1 rounded-lg bg-slate-700/50 hover:bg-slate-600/50 transition text-white border border-slate-600/40 hover:border-slate-500/60"
+                                            aria-label="Previous card"
+                                        >
+                                            <ChevronLeft className="md:h-5 md:w-5 h-3 w-3" />
+                                        </button>
+
+                                        <button
+                                            onClick={handleReset}
+                                            className="md:px-6 md:py-3 px-3 py-1 rounded-lg bg-slate-700/50 hover:bg-slate-600/50 transition text-white flex items-center gap-2 font-medium border border-slate-600/40 hover:border-slate-500/60"
+                                        >
+                                            <RotateCw className="md:h-4 md:w-4 h-3 w-3" />
+                                            <span className='md:text-sm text-xs'>Reset</span>
+                                        </button>
+
+                                        <button
+                                            onClick={handleNext}
+                                            className="md:p-3 p-1 rounded-lg bg-slate-700/50 hover:bg-slate-600/50 transition text-white border border-slate-600/40 hover:border-slate-500/60"
+                                            aria-label="Next card"
+                                        >
+                                            <ChevronRight className="md:h-5 md:w-5 h-3 w-3" />
+                                        </button>
+                                    </div>
+
                                     {/* Front side */}
                                     {!isFlipped && (
                                         <div className="text-center animate-fadeIn">
                                             <p className="text-slate-200 text-sm font-medium mb-4 opacity-75  absolute top-4 left-4">
-                                                {isLanguageReversed ? 'English' : 'German'}
+                                                {isLanguageReversed ? 'English ' + currentLevel : 'German ' + currentLevel}
                                             </p>
-                                            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 drop-shadow-lg mt-9">
+                                            <h2 className="text-2xl md:text-5xl font-bold text-white mb-6 drop-shadow-lg mt-9">
                                                 {isLanguageReversed
                                                     ? currentCard?.english
                                                     : currentCard?.german}
                                             </h2>
-                                            <p className="text-blue-100 text-sm opacity-75">
-                                                Click to reveal {isLanguageReversed ? 'German' : 'English'}
-                                            </p>
+                                            {/* <p className="text-blue-100 text-sm opacity-75">
+                                                Click to reveal {isLanguageReversed ? 'German ' + currentLevel : 'English ' + currentLevel}
+                                            </p> */}
                                         </div>
                                     )}
 
@@ -277,16 +338,16 @@ const Page = () => {
                                     {isFlipped && (
                                         <div className="text-center animate-fadeIn">
                                             <p className="text-slate-200 text-sm font-medium mb-4 opacity-75  absolute top-4 left-4">
-                                                {isLanguageReversed ? 'German' : 'English'}
+                                                {isLanguageReversed ? 'German ' + currentLevel : 'English ' + currentLevel}
                                             </p>
                                             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 drop-shadow-lg mt-9">
                                                 {isLanguageReversed
                                                     ? currentCard?.german
                                                     : currentCard?.english}
                                             </h2>
-                                            <p className="text-blue-100 text-sm opacity-75">
-                                                Click to see {isLanguageReversed ? 'English' : 'German'}
-                                            </p>
+                                            {/* <p className="text-blue-100 text-sm opacity-75">
+                                                Click to see {isLanguageReversed ? 'English ' + currentLevel : 'German ' + currentLevel}
+                                            </p> */}
                                         </div>
                                     )}
                                 </div>
@@ -294,25 +355,25 @@ const Page = () => {
                         </div>
 
                         <style jsx>{`
-              @keyframes fadeIn {
-                from {
-                  opacity: 0;
-                  transform: scale(0.98);
-                }
-                to {
-                  opacity: 1;
-                  transform: scale(1);
-                }
-              }
-              .animate-fadeIn {
-                animation: fadeIn 0.4s ease-out;
-              }
-              .perspective {
-                perspective: 1000px;
-              }
-            `}</style>
+                        @keyframes fadeIn {
+                            from {
+                            opacity: 0;
+                            transform: scale(0.98);
+                            }
+                            to {
+                            opacity: 1;
+                            transform: scale(1);
+                            }
+                        }
+                        .animate-fadeIn {
+                            animation: fadeIn 0.4s ease-out;
+                        }
+                        .perspective {
+                            perspective: 1000px;
+                        }
+                        `}</style>
 
-                        {/* Progress and Navigation */}
+                        {/* Progress */}
                         <div className="flex flex-col items-center gap-6">
                             {/* Progress indicator */}
                             <div className="w-full max-w-sm">
@@ -324,7 +385,7 @@ const Page = () => {
                                 </div>
                                 <div className="w-full bg-slate-700/50 rounded-full h-2.5 overflow-hidden">
                                     <div
-                                        className="bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-500 h-2.5 rounded-full transition-all duration-300"
+                                        className="bg-linear-to-r from-blue-500 via-purple-500 to-cyan-500 h-2.5 rounded-full transition-all duration-300"
                                         style={{
                                             width: `${((currentIndex + 1) / filteredVocab.length) * 100}%`,
                                         }}
@@ -332,32 +393,6 @@ const Page = () => {
                                 </div>
                             </div>
 
-                            {/* Navigation buttons */}
-                            <div className="flex gap-4 items-center">
-                                <button
-                                    onClick={handlePrev}
-                                    className="p-3 rounded-lg bg-slate-700/50 hover:bg-slate-600/50 transition text-white border border-slate-600/40 hover:border-slate-500/60"
-                                    aria-label="Previous card"
-                                >
-                                    <ChevronLeft className="h-5 w-5" />
-                                </button>
-
-                                <button
-                                    onClick={handleReset}
-                                    className="px-6 py-3 rounded-lg bg-slate-700/50 hover:bg-slate-600/50 transition text-white flex items-center gap-2 font-medium border border-slate-600/40 hover:border-slate-500/60"
-                                >
-                                    <RotateCw className="h-4 w-4" />
-                                    Reset
-                                </button>
-
-                                <button
-                                    onClick={handleNext}
-                                    className="p-3 rounded-lg bg-slate-700/50 hover:bg-slate-600/50 transition text-white border border-slate-600/40 hover:border-slate-500/60"
-                                    aria-label="Next card"
-                                >
-                                    <ChevronRight className="h-5 w-5" />
-                                </button>
-                            </div>
 
                             {/* Category badge */}
                             <div className="text-sm text-slate-400">
@@ -393,7 +428,7 @@ const Page = () => {
                         </div>
                         <button
                             onClick={handleReset}
-                            className="px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 rounded-lg text-white font-medium transition shadow-lg shadow-blue-500/30"
+                            className="px-6 py-3 bg-linear-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 rounded-lg text-white font-medium transition shadow-lg shadow-blue-500/30"
                         >
                             Reset All Filters
                         </button>

@@ -122,6 +122,23 @@ const Page = () => {
 
     const isCurrentCardHard = currentCard && hardWords.has(currentCard.id);
 
+    // pronoanciation checking
+    const playPronunciation = (text, languageCode = 'de-DE') => {
+        // Check if the browser supports text-to-speech
+        if ('speechSynthesis' in window) {
+            // Cancel any speech currently playing so they don't overlap
+            window.speechSynthesis.cancel();
+
+            const utterance = new SpeechSynthesisUtterance(text);
+            utterance.lang = languageCode; // 'de-DE' for German, 'en-US' for English, etc.
+            utterance.rate = 0.8;          // Slightly slower (0.9 instead of 1.0) helps language learners!
+
+            window.speechSynthesis.speak(utterance);
+        } else {
+            alert("Sorry, your browser doesn't support text-to-speech.");
+        }
+    };
+
     return (
         <div className="min-h-screen bg-linear-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden">
             {/* Background decorative elements */}
@@ -134,7 +151,7 @@ const Page = () => {
             <div className="relative z-10 max-w-5xl mx-auto px-4 pt-6 pb-12">
                 {/* Controls */}
                 <div className="space-y-4 mb-8">
-                    {/* Top row: Search and Language Toggle */}
+                    {/* Top row: Search, Level, and Language Toggle */}
                     <div className="md:flex gap-1">
                         {/* Search */}
                         <div className="md:col-span-2 relative md:w-3/4 mb-2 sm:mb-0">
@@ -288,6 +305,18 @@ const Page = () => {
                                         >
                                             🔴 Hard
                                         </button>
+                                        <button
+                                            onClick={(e) => {
+                                                e.stopPropagation();
+                                                if (currentCard) {
+                                                    playPronunciation(currentCard.german, 'de-DE');
+                                                }
+                                            }}
+                                            // onClick={console.log('Listening..')}
+                                            className='px-3 py-1.5 rounded-full text-xs font-semibold transition bg-blue-700/80 text-white shadow-lg shadow-blue-500/50 hover:bg-blue-500/50'
+                                        >
+                                            🔊
+                                        </button>
                                     </div>
 
                                     {/* Navigation buttons */}
@@ -328,6 +357,7 @@ const Page = () => {
                                                     ? currentCard?.english
                                                     : currentCard?.german}
                                             </h2>
+
                                             {/* <p className="text-blue-100 text-sm opacity-75">
                                                 Click to reveal {isLanguageReversed ? 'German ' + currentLevel : 'English ' + currentLevel}
                                             </p> */}

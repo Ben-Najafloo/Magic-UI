@@ -154,7 +154,7 @@ const Page = () => {
                     {/* Top row: Search, Level, and Language Toggle */}
                     <div className="md:flex gap-1">
                         {/* Search */}
-                        <div className="md:col-span-2 relative md:w-3/4 mb-2 sm:mb-0">
+                        <div className="md:col-span-2 relative md:w-3/5 mb-2 sm:mb-0">
                             <Search className="absolute left-4 top-3.5 h-5 w-5 text-slate-500" />
                             <input
                                 type="text"
@@ -170,7 +170,7 @@ const Page = () => {
                         </div>
 
                         {/* Language Direction Toggle */}
-                        <div className='md:w-1/4 flex gap-x-2'>
+                        <div className='md:w-2/5 flex gap-x-2'>
                             <button
                                 onClick={() => setIsLanguageReversed(!isLanguageReversed)}
                                 className={`px-4 py-3 rounded-lg font-medium transition flex items-center justify-center gap-2 border ${isLanguageReversed
@@ -185,7 +185,7 @@ const Page = () => {
                                 </span>
                             </button>
                             <Select onValueChange={(value) => setCurrentLevel(value)} value={currentLevel}>
-                                <SelectTrigger className="w-full max-w-28 py-6">
+                                <SelectTrigger className="w-full max-w-40 py-6">
                                     <SelectValue placeholder="Level" />
                                 </SelectTrigger>
                                 <SelectContent>
@@ -193,6 +193,7 @@ const Page = () => {
                                         <SelectLabel>Level</SelectLabel>
                                         <SelectItem value="A1">A 1</SelectItem>
                                         <SelectItem value="A2">A 2</SelectItem>
+                                        <SelectItem value="A2S">Sentences A2</SelectItem>
                                     </SelectGroup>
                                 </SelectContent>
                             </Select>

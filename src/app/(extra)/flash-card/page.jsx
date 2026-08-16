@@ -194,6 +194,7 @@ const Page = () => {
                                         <SelectItem value="A1">A 1</SelectItem>
                                         <SelectItem value="A2">A 2</SelectItem>
                                         <SelectItem value="A2S">Sentences A2</SelectItem>
+                                        <SelectItem value="Partizip2">Partizip 2</SelectItem>
                                     </SelectGroup>
                                 </SelectContent>
                             </Select>

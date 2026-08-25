@@ -6,6 +6,7 @@ import History from "@/components/History";
 import JobEx from "@/components/JobEx";
 import { MarqueeSkills } from "@/components/MarqueeSkills";
 import { MorphinSkills } from "@/components/MorphinSkills";
+import Skills from "@/components/Skills";
 import { University } from "@/components/University";
 import WhatIDo from "@/components/WhatIDo";
 
@@ -16,6 +17,7 @@ export default function Home() {
 
       <div>
         <Hero />
+        <Skills />
         <History />
         <WhatIDo />
         <JobEx />

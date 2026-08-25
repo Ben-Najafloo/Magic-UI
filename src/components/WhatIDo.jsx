@@ -48,7 +48,7 @@ const WhatIDo = () => {
                     "inset-x-0 inset-y-[-30%] h-[200%] skew-y-12"
                 )}
             />
-            <div className='text-left mb-11 w-full lg:px-20 gap-y-2 flex justify-between'>
+            <div className='text-left mb-11 w-full lg:px-20 px-3 gap-y-2 flex justify-between'>
                 <div>
                     <span className="text-2xl">Projects</span>
                     <p>A curated collection of digital experiences; Turning ideas into functional code.</p>

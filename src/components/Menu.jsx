@@ -7,13 +7,13 @@ import { TbFileCv } from "react-icons/tb";
 export function Menu() {
 
     const links = [
-        {
-            title: "CV",
-            icon: (
-                <TbFileCv className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-            ),
-            href: "/cv",
-        },
+        // {
+        //     title: "CV",
+        //     icon: (
+        //         <TbFileCv className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        //     ),
+        //     href: "/cv",
+        // },
         {
             title: "History",
             icon: (

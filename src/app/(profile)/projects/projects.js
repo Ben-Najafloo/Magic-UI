@@ -44,7 +44,7 @@ const projects = [
         repoUrl: "https://github.com/Ben-Najafloo/EU-Funded",
         features: ["AI Integration", "Web Scrapper", "Powerful Search Engine"],
         metrics: ["Optimized React/Code Splitting", "Scalable NoSQL/MongoDB"],
-        techStack: ["React", "Flask", "MongoDB", "Tailwind", "Docker", "GitLab", "BeautifulSoup", "PyMongo"],
+        techStack: ["React", "FastAPI", "MongoDB", "Tailwind", "Docker", "GitLab", "BeautifulSoup", "PyMongo"],
         highlights: [
             {
                 icon: "shield",
@@ -86,7 +86,7 @@ const projects = [
         ],
         techStack: [
             "React.js",
-            "Flask",
+            "FastAPI",
             "Python",
             "Scikit-Learn",
             "Fairlearn",

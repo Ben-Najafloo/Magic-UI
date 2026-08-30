@@ -5,13 +5,22 @@ import { Badge } from "@/components/ui/badge";
 
 const exp = [
     {
+        company: "Freelancer",
+        logo: "freelancer.jfif",
+        role: "AI Full Stack Developer,",
+        duration: "",
+        description:
+            "Developed a full-stack web application for evaluating fairness in AI models using Flask (Python) and React Designed and implemented RESTful APIs with Flask, using Pydantic for schema validation and mod￾ular routing to structure backend services. Built a React frontend with modern tooling (Axios, TanStack Query, Zod) for state management, data validation, and efficient API integration. Implemented interactive data visualizations with Chart.js to analyze model performance and fairness metrics. Optimized frontend performance through code splitting, lazy loading, and modular component archi￾tecture.",
+        tech: ["Python", "FastAPI", "React", "MongoDB", "PostgreSQL", "Restfull API", "Docker", "TypeScript"],
+    },
+    {
         company: "University of Milan",
         logo: "unimia.png",
         role: "SOFTWARE DEVELOPER",
         duration: "",
         description:
-            "Developed a full-stack web application for evaluating fairness in AI models using Flask (Python) and React Designed and implemented RESTful APIs with Flask, using Pydantic for schema validation and mod￾ular routing to structure backend services. Built a React frontend with modern tooling (Axios, TanStack Query, Zod) for state management, data validation, and efficient API integration. Implemented interactive data visualizations with Chart.js to analyze model performance and fairness metrics. Optimized frontend performance through code splitting, lazy loading, and modular component archi￾tecture.",
-        tech: ["Python", "Flask", "React", "Fairness", "AI", "ML", "Fairlearn", "Chart.js"],
+            "Developed a full-stack web application for evaluating fairness in AI models using some Python libraries like Pandas, NumPy, and scikit-learn. Designed and implemented RESTful APIs with FastAPI, using Pydantic for schema validation and modular routing to structure backend services. Built a React frontend with modern tooling (Axios, TanStack Query, Zod) for state management, data validation, and efficient API integration. Implemented interactive data visualizations with Chart.js to analyze model performance and fairness metrics. Optimized frontend performance through code splitting, lazy loading, and modular component architecture.",
+        tech: ["Python", "FastAPI", "React", "TypeScript", "Fairness", "AI", "ML", "Fairlearn", "Chart.js", "Pandas", "NumPy", "scikit-learn"],
     },
     {
         company: "Zerolatency",
@@ -19,8 +28,8 @@ const exp = [
         role: "SOFTWARE DEVELOPER",
         duration: "",
         description:
-            "Developed and maintained scalable RESTful APIs using Python (Flask) and Node.js (Express), leveraging PostgreSQL for efficient data persistence and real-time video translation services. Architected high-performance applications using Next.js, strategically implementing SSR, ISR and SSG to maximize SEO and Core Web Vitals. Managed the integration of RESTful APIs and state management using Redux Toolkit, Zustand, ensuring robust and predictable UI behavior. Collaborated daily in an Agile/Scrum environment, using Jira for sprint tracking and Git for collabo￾rative version control and code reviews.",
-        tech: ["Python", "Flask", "React", "Redux", "Node.js", "Express", "Next.js", "PostgreSQL", "Tailwind"],
+            "Developed and maintained scalable RESTful APIs using Python (FastAPI) and Node.js (Express), leveraging PostgreSQL for efficient data persistence and real-time video translation services. Architected high-performance applications using Next.js, strategically implementing SSR, ISR and SSG to maximize SEO and Core Web Vitals. Managed the integration of RESTful APIs and state management using Redux Toolkit, Zustand, ensuring robust and predictable UI behavior. Collaborated daily in an Agile/Scrum environment, using Jira for sprint tracking and Git for collabo￾rative version control and code reviews.",
+        tech: ["Python", "FastAPI", "React", "Redux", "Node.js", "Express", "Next.js", "PostgreSQL", "Tailwind"],
     },
     {
         company: "Respina",

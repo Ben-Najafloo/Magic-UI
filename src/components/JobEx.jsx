@@ -10,7 +10,7 @@ const exp = [
         role: "AI Full Stack Developer,",
         duration: "",
         description:
-            "Developed a full-stack web application for evaluating fairness in AI models using Flask (Python) and React Designed and implemented RESTful APIs with Flask, using Pydantic for schema validation and mod￾ular routing to structure backend services. Built a React frontend with modern tooling (Axios, TanStack Query, Zod) for state management, data validation, and efficient API integration. Implemented interactive data visualizations with Chart.js to analyze model performance and fairness metrics. Optimized frontend performance through code splitting, lazy loading, and modular component archi￾tecture.",
+            "Developed a full-stack web application for evaluating fairness in AI models using Flask (Python) and React Designed and implemented RESTful APIs with Flask, using Pydantic for schema validation and modular routing to structure backend services. Built a React frontend with modern tooling (Axios, TanStack Query, Zod) for state management, data validation, and efficient API integration. Implemented interactive data visualizations with Chart.js to analyze model performance and fairness metrics. Optimized frontend performance through code splitting, lazy loading, and modular component architecture.",
         tech: ["Python", "FastAPI", "React", "MongoDB", "PostgreSQL", "Restfull API", "Docker", "TypeScript"],
     },
     {

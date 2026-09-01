@@ -17,7 +17,7 @@ const Introduction = () => {
                     Architecting advanced AI workflows, integrating LLMs and vector databases.
                 </AnimatedSpan>
                 <AnimatedSpan className=" text-xs text-green-500">
-                    Proficient in architecting backends using frameworks like Flask and FastAPI, Express.js, and Next.js.
+                    Proficient in architecting backends using FastAPI and Next.js.
                 </AnimatedSpan>
                 <AnimatedSpan className=" text-xs text-green-500">
                     And database ORMs like Prisma, SQLAlchemy and MongoDB.

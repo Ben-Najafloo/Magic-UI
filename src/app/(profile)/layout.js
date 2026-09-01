@@ -3,6 +3,24 @@ import "./../globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import Header from "@/components/Header";
 
+
+export const metadata = {
+  title: 'Behnam Najafloo | Portfolio & Resume',
+  description: 'Official portfolio website of Behnam Najafloo. Showcasing my education, work experience, and projects.',
+  keywords: ['Behnam Najafloo', 'Portfolio', 'Software Developer', 'Resume'],
+  robots: {
+    index: true,
+    follow: true,
+  },
+  openGraph: {
+    title: 'Behnam Najafloo | Portfolio',
+    description: 'Official portfolio website of Behnam Najafloo.',
+    url: 'https://behnam-najafloo.vercel.app',
+    siteName: 'Behnam Najafloo Portfolio',
+    type: 'website',
+  },
+};
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -13,10 +31,6 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata = {
-  title: "Behnam Najafloo",
-  description: "Behnam Najafloo Portfolio as a Software Developer. Here you can find my projects and contact me.",
-};
 
 export default function RootLayout({ children }) {
   return (

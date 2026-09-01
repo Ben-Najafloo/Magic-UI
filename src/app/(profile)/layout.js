@@ -35,6 +35,9 @@ const geistMono = Geist_Mono({
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <meta name="google-site-verification" content="google-site-verification=OmB-NRJ1jZtXp7Z2rqMAug6zz35wfV5cJC1uYGXHbXM" />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased relative`}
       >
